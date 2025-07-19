@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/image/logo.png";
+import { TypeAnimation } from "react-type-animation";
 
 export const Banner = () => {
   return (
@@ -10,6 +11,7 @@ export const Banner = () => {
           gridTemplateColumns: "1fr", // default for mobile
         }}
       >
+
         {/* Left content */}
         <div
           style={{
@@ -19,26 +21,43 @@ export const Banner = () => {
           }}
         >
           <h1
-            style={{
-              color: "white",
-              marginBottom: "1rem",
-              fontSize: "2.25rem",
-              fontWeight: 800,
-            }}
-          >
-            <span
-              style={{
-                backgroundImage: "linear-gradient(to right, #a855f7, #ec4899)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                display: "inline-block",
-                color: "transparent",
-              }}
-            >
-              Hello, I'm Jiwon Bae
-            </span>
-          </h1>
+  style={{
+    marginBottom: "1rem",
+    fontSize: "2.25rem",
+    fontWeight: 800,
+    color: "white", // Hi! I'm will be white
+  }}
+>
+  Hello! I'm{" "}
+  <span
+    style={{
+      backgroundImage: "linear-gradient(to right, #9CAEA9, #CCDAD1)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      backgroundClip: "text",
+      display: "inline-block",
+      color: "transparent",
+      fontWeight: "700",
+    }}
+  >
+    <TypeAnimation
+      sequence={[
+        "Jiwon",
+        500,
+        "a web developer",
+        1000,
+        "a Software Engineer",
+        1000,
+        () => {},
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={Infinity}
+      style={{ color: "inherit" }}
+      speed={50}
+    />
+  </span>
+</h1>
 
           <p
             style={{
