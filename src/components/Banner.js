@@ -2,22 +2,24 @@ import React from "react";
 import logo from "../assets/image/LogoR.png";
 import { TypeAnimation } from "react-type-animation";
 
-
 export const Banner = () => {
   return (
     <section>
-      {/* EDIT to down -> Left */}
       <div
-        style={{ //
+        style={{
           display: "grid",
-          marginTop: '70px',
-          gridTemplateColumns: "1fr", // default for mobile
+          marginTop: "70px",
+          gridTemplateColumns: "1fr",
+          padding: "0 20px",
         }}
       >
+
+
+
+        
         <div>
           <h1
             style={{
-              marginBottom: "1rem",
               fontSize: "2.25rem",
               fontWeight: 800,
               color: "white",
@@ -42,8 +44,6 @@ export const Banner = () => {
                   1000,
                   "a Software Engineer",
                   1000,
-                  "지원",
-                  1000,
                   () => {},
                 ]}
                 wrapper="span"
@@ -58,39 +58,37 @@ export const Banner = () => {
           <p
             style={{
               color: "white",
-              fontSize: "1.1rem"
+              fontWeight: "900",
+              fontSize: "20px",
             }}
           >
             BLAH BLAH
           </p>
         </div>
 
-
-  <div
-    style={{
-      width: "400px",
-      height: "400px",
-      borderRadius: "50%",
-      backgroundColor: "#222",
-      margin: "auto",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    }}
-  >
-    <img
-      src={logo}
-      alt="Portfolio Logo"
-      style={{
-        width: "300px",
-        height: "300px",
-        objectFit: "contain"
-      }}
-    />
-  </div>
-</div>
-
-
+        <div
+          style={{
+            width: "400px",
+            height: "400px",
+            borderRadius: "50%",
+            backgroundColor: "#222",
+            margin: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <img
+            src={logo}
+            alt="Portfolio Logo"
+            style={{
+              width: "300px",
+              height: "300px",
+              objectFit: "contain",
+            }}
+          />
+        </div>
+      </div>
     </section>
   );
 };

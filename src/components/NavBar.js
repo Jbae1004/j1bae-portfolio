@@ -28,7 +28,7 @@ export const NavBar = () => {
     alignItems: "center",
     justifyContent: "center",
     marginRight: "6px",
-    backgroundColor: "rgba(217, 217, 217, 0.1)",
+    backgroundColor: "rgba(217, 217, 217, 0.1)", // optional bg
   };
   const iconImageStyle = {
     width: "16px",
@@ -36,7 +36,7 @@ export const NavBar = () => {
   };
 
   return (
-    <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+    <Navbar className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="/">
           <img src={logo} alt="Portfolio Logo" />
