@@ -34,7 +34,7 @@ body {
   overflow-x: hidden;
   position: relative;
   background-color: #6F6866 !important;
-  color: yellow !important;
+  color: white !important;
   font-family: 'Centra', sans-serif !important;
 }
 
@@ -47,12 +47,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Navbar css */
 
 nav.navbar {
-  padding: 18px 0;
+  padding: 0;
   position: fixed;
   width: 100%;
+  height: 70px;
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
+  background-color: #474044;
 }
 nav.navbar.scrolled {
   padding: 0px 0;
@@ -106,7 +108,6 @@ span.navbar-text {
 	  transition: 0.3s ease-in-out;
 }
 
-
 .social-icon a:hover::before {
     transform: scale(1);
 }
@@ -123,7 +124,7 @@ span.navbar-text {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
-  padding: 18px 34px;
+  padding: 10px 30px;
   font-size: 18px;
   margin-left: 18px;
 	position: relative;
@@ -202,7 +203,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Banner css*/
 
 .banner {
-  margin-top: 0;
+  margin-top: 70px;
   padding: 260px 0 100px 0;
   background-position: top center;
   background-size: cover;
