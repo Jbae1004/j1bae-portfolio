@@ -3,13 +3,9 @@ import logo from "../assets/image/LogoR.png";
 import { TypeAnimation } from "react-type-animation";
 import "../App.css";
 
-// style={{ marginTop: "150px", padding: "0 20px" }}
-
 export const Banner = () => {
   return (
-    <section
-      className="grid-container"
-    >
+    <section className="grid-container">
       <div>
         <h1
           style={{
