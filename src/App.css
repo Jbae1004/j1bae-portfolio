@@ -215,6 +215,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .App-logo {
@@ -249,5 +252,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; 
+  padding: 75px;
+}
+
+.grandchildren {
+  display: flex;
+  flex-direction: column;
+}
+
+/* @media (max-width: 1300px) {
+  .grid-container {
+    gap: 10px;
+  }
+} */
+
+@media (max-width: 1100px) {
+  .grid-container {
+    grid-template-columns: 1fr;
   }
 }
