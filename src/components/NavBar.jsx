@@ -20,7 +20,7 @@ export const NavBar = () => {
   const onUpdateActiveLink = (value) => setActiveLink(value);
 
   const iconContainerStyle = {
-    width: "42px", // fixed circle size
+    width: "42px",
     height: "42px",
     borderRadius: "50%",
     border: "1px solid #fff",
@@ -28,7 +28,7 @@ export const NavBar = () => {
     alignItems: "center",
     justifyContent: "center",
     marginRight: "6px",
-    backgroundColor: "rgba(217, 217, 217, 0.1)", // optional bg
+    backgroundColor: "rgba(217, 217, 217, 0.1)",
   };
   const iconImageStyle = {
     width: "16px",

@@ -20,7 +20,7 @@ export const Banner = () => {
           Hello! I'm{" "}
           <span
             style={{
-              backgroundImage: "linear-gradient(to right, #9CAEA9, #CCDAD1)",
+              backgroundImage: "linear-gradient(to right, #A4C3B2, #F6FFF8)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -50,14 +50,19 @@ export const Banner = () => {
         <p
           style={{
             color: "white",
-            fontWeight: "900",
-            fontSize: "20px",
+            fontWeight: "500",
+            fontSize: "18px",
             marginTop: "20px",
             marginBottom: "20px",
-            textAlign: "center",
+            textAlign: "left",
           }}
         >
-          BLAH BLAH
+          Blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+          blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+          blah blah blah blah blah blah
         </p>
       </div>
 
@@ -73,10 +78,10 @@ export const Banner = () => {
       >
         <div
           style={{
-            width: "300px",
-            height: "300px",
+            width: "350px",
+            height: "350px",
             borderRadius: "50%",
-            backgroundColor: "#474044",
+            backgroundColor: "#4e4a48ff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -86,9 +91,10 @@ export const Banner = () => {
             src={logo}
             alt="Portfolio Logo"
             style={{
-              width: "400px",
-              height: "400px",
-              objectFit: "contain",
+              width: "700px",
+              height: "700px",
+              objectFit: "center",
+              justifyContent: "center",
             }}
           />
         </div>

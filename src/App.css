@@ -33,7 +33,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #6F6866 !important;
+  background-color: #8a817c !important;
   color: white !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -53,7 +53,7 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
-  background-color: #474044;
+  background-color: #463f3a;
 }
 
 nav.navbar.scrolled {
@@ -211,7 +211,41 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 } */
 
-/* Skills css */
+/* TabButton CSS */
+
+.tab-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-text {
+  font-weight: 600;
+  color: #D3D0CB;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.tab-button:hover .tab-text {
+  color: white;
+}
+
+.tab-text.active {
+  color: white;
+}
+
+.tab-underline {
+  height: 4px;
+  background-color: #463F3A;
+  width: 0;
+  margin-top: 6px;
+  transition: width 0.3s ease;
+}
+
+/* App CSS */
 
 .App {
   text-align: center;
@@ -259,7 +293,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center; 
-  padding: 75px;
+  padding: 30px 75px;
 }
 
 .grandchildren {
