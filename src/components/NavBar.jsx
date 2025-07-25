@@ -34,7 +34,14 @@ export const NavBar = () => {
                 className={
                   activeLink === "home" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("home")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onUpdateActiveLink("home");
+                  const homeSection = document.getElementById("home");
+                  if (homeSection) {
+                    homeSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 Home
               </Nav.Link>
@@ -43,11 +50,18 @@ export const NavBar = () => {
                 className={
                   activeLink === "about" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("about")}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onUpdateActiveLink("about");
+                  const aboutSection = document.getElementById("about");
+                  if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 About
               </Nav.Link>
-              <Nav.Link
+              {/* <Nav.Link
                 href="#skills"
                 className={
                   activeLink === "skills" ? "active navbar-link" : "navbar-link"
@@ -55,10 +69,18 @@ export const NavBar = () => {
                 onClick={() => onUpdateActiveLink("skills")}
               >
                 Skills
-              </Nav.Link>
+              </Nav.Link> */}
             </Nav>
             <span className="navbar-text">
-              <button className="vvd" onClick={() => console.log("contact")}>
+              <button
+                className="vvd"
+                onClick={() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 <span>Contact</span>
               </button>
             </span>

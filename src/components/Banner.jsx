@@ -5,7 +5,7 @@ import "../App.css";
 
 export const Banner = () => {
   return (
-    <section className="grid-container">
+    <section id="home" className="grid-container">
       <div>
         <h1
           style={{

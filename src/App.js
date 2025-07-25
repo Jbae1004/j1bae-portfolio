@@ -1,11 +1,10 @@
-//import logo from './logo.svg';
 import './App.css';
 import { NavBar } from './components/NavBar';
 import { Banner } from './components/Banner';
 import About from './components/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Footer } from './components/Footer';
-// import ContactMain from './components/Contact/ContactMain';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -14,9 +13,9 @@ function App() {
       <NavBar />
       <Banner />
       <About />
-      {/* <ContactMain /> */}
+      <Contact />
       <Footer />
-      
+
     </div>
   );
 }
