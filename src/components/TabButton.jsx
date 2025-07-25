@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const variants = {
   default: { width: 0 },
-  active: { width: "calc(100% - 12px)" },
+  active: { width: "auto" },
 };
 
 const TabButton = ({ active, selectTab, children }) => {

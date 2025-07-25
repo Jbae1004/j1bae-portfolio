@@ -9,7 +9,7 @@ export const Banner = () => {
       <div>
         <h1
           style={{
-            fontSize: "55px",
+            fontSize: "40px",
             fontWeight: 800,
             color: "white",
             marginTop: "50px",

@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from "react";
+import React, { useState } from "react";
 import TabButton from "./TabButton";
 import logo from "../assets/image/AboutLogo.png";
 
@@ -95,7 +95,6 @@ const About = () => {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          alignItems: "center",
           gap: "35px",
           alignItems: "center",
           justifyContent: "center",
@@ -124,7 +123,7 @@ const About = () => {
               color: "#081c15",
               fontSize: "35px",
               fontWeight: "bold",
-              margin: "20px",
+              margin: "0 20px 50px 20px",
             }}
           >
             About Me
