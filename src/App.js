@@ -1,21 +1,17 @@
-import './App.css';
-import { NavBar } from './components/NavBar';
-import { Banner } from './components/Banner';
-import About from './components/About';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Footer } from './components/Footer';
-import Contact from './components/Contact';
-
+import { NavBar } from './components/Navbar/NavBar';
+import { Banner } from './components/Banner/Banner';
+import { Footer } from './components/Footer/Footer';
+import Contact from './pages/Contact/Contact';
+import About from './pages/About/About';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <NavBar />
       <Banner />
       <About />
       <Contact />
       <Footer />
-
     </div>
   );
 }

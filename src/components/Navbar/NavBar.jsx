@@ -1,28 +1,27 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/image/logo.png";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const onUpdateActiveLink = (value) => setActiveLink(value);
+  const onUpdateActiveLink = (value) => {
+    setActiveLink(value);
+    setMenuOpen(false);
+  };
 
   return (
     <Navbar className={scrolled ? "scrolled" : ""}>
       <Container>
-        <Navbar.Brand href="/">
-          <img src={logo} alt="Portfolio Logo" />
-        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggle-icon"></span>
         </Navbar.Toggle>

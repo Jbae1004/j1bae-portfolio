@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "../assets/image/LogoR.png";
+import { logo } from "../../assets/images";
 import { TypeAnimation } from "react-type-animation";
-import "../App.css";
 
 export const Banner = () => {
   return (

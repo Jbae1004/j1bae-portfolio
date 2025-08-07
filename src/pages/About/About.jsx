@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import TabButton from "./TabButton";
-import logo from "../assets/image/AboutLogo.png";
+import { logo } from "../../assets/images";
 
 const TAB_DATA = [
   {
@@ -154,17 +153,7 @@ const About = () => {
               padding: "10px",
               justifyContent: "center",
             }}
-          >
-            {TAB_DATA.map((tabItem) => (
-              <TabButton
-                key={tabItem.id}
-                selectTab={() => handleTabChange(tabItem.id)}
-                active={tab === tabItem.id}
-              >
-                {tabItem.title}
-              </TabButton>
-            ))}
-          </div>
+          ></div>
           <div
             style={{
               marginTop: "10px",

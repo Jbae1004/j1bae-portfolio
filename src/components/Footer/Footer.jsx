@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/image/logo.png";
-import navIcon1 from "../assets/image/nav-icon1.svg";
-import navIcon2 from "../assets/image/nav-icon2.svg";
-import "../App.css";
+import { logo } from "../../assets/images";
+import { navicon1, navicon2 } from "../../assets/icons";
 
 export const Footer = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,7 +36,7 @@ export const Footer = () => {
           rel="noopener noreferrer"
           className="footer-icon"
         >
-          <img src={navIcon1} alt="LinkedIn" />
+          <img src={navicon1} alt="LinkedIn" />
         </a>
         <a
           href="https://github.com/Jbae1004"
@@ -46,7 +44,7 @@ export const Footer = () => {
           rel="noopener noreferrer"
           className="footer-icon"
         >
-          <img src={navIcon2} alt="GitHub" />
+          <img src={navicon2} alt="GitHub" />
         </a>
       </div>
     </footer>
