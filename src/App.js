@@ -8,15 +8,15 @@ import styles from "./App.module.scss";
 export default function App() {
   return (
     <div className={styles.body}>
-      {/* <div className={styles.leftBorder} />
+      <div className={styles.leftBorder} />
       <div className={styles.rightBorder} />
       <div className={styles.topBorder} />
-      <div className={styles.bottomBorder} /> */}
+      <div className={styles.bottomBorder} />
       <div className={styles.container}>
         <NavBar />
         <Banner />
-        {/* <About />
-        <Contact />
+        <About />
+        {/* <Contact />
         <Footer /> */}
       </div>
     </div>

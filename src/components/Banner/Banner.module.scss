@@ -1,6 +1,50 @@
+.banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;   // two columns side by side on large screens
+  grid-template-rows: 1fr;          // one row on large screens
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;    // single column on small screens
+    grid-template-rows: auto auto; // two rows stacked vertically
+    height: auto;                  // let height grow naturally to fit content
+  }
+}
+
 .bannerImage {
-  width: 700px;
-  height: 700px;
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
   object-fit: contain;
-  display: block;
+  grid-column: 1;
+  grid-row: 1;
+
+  @media (max-width: 600px) {
+    max-height: 250px;     // smaller max height on small screens
+    grid-column: 1;
+    grid-row: 1;           // first row on small screens
+  }
+}
+
+.textContainer {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-family: 'Caveat Brush', cursive;
+  font-size: clamp(16px, 3vw, 30px);
+  text-align: center;
+  color: black;
+  overflow-wrap: break-word;
+
+  @media (max-width: 600px) {
+    grid-column: 1;
+    grid-row: 2;           // second row on small screens
+    padding: 0.5rem 1rem;
+  }
 }

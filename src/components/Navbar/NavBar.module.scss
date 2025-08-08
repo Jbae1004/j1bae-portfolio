@@ -1,50 +1,61 @@
-.navbar {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  z-index: 200;
-}
-
 .hamburger {
-  width: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
   height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  z-index: 2000; /* keeps hamburger above menu */
 }
 
-.bar, .barOpen {
-  width: 35px;
+.bar {
   height: 3px;
-  background: #333;
-  border-radius: 1px;
-  transition: all 0.3s;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate to X */
+.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(3px, 1px);
+}
+.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -10px);
 }
 
 .menu {
-  display: none;
   position: absolute;
-  top: 40px;
+  top: 0;
   right: 0;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  padding: 16px 24px;
+  width: 250px;
+  height: 250px;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  background-color: pink;
+  border-radius: 0 0 0 250px;
+  z-index: 1000; /* under hamburger */
+  display: none;
 }
 
-.menuOpen {
+.showMenu {
   display: block;
 }
 
-.menu li {
-  margin: 12px 0;
+.menuItem {
+  padding: 10px 0;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.menu a {
-  color: #333;
-  text-decoration: none;
+.menuItem:hover {
+  background-color: rgb(242, 174, 185);
   font-weight: 600;
-  font-size: 18px;
 }
