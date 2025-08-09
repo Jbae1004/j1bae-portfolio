@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.scss";
 
+const menuNames = ["Home", "About", "Skills", "Contact"];
+
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,16 +12,21 @@ export default function NavBar() {
         className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
+        {[1, 2, 3].map((_bar) => (
+          <span className={styles.bar} />
+        ))}
       </div>
 
-      <ul className={`${styles.menu} ${isOpen ? styles.showMenu : ""}`}>
-        <li className={styles.menuItem}>Home</li>
-        <li className={styles.menuItem}>About</li>
-        <li className={styles.menuItem}>Services</li>
-        <li className={styles.menuItem}>Contact</li>
+      <ul
+        className={`${styles.menu} ${
+          isOpen ? styles.showMenu : styles.hideMenu
+        }`}
+      >
+        {menuNames.map((name) => (
+          <li key={name} className={styles.menuItem}>
+            {name}
+          </li>
+        ))}
       </ul>
     </>
   );

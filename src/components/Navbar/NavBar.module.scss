@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 2000; /* keeps hamburger above menu */
+  
 }
 
 .bar {
@@ -16,9 +16,9 @@
   background-color: black;
   border-radius: 2px;
   transition: all 0.3s ease;
+  z-index: 10;
 }
-
-/* Animate to X */
+ 
 .open .bar:nth-child(1) {
   transform: rotate(45deg) translate(3px, 1px);
 }
@@ -33,19 +33,58 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   margin: 0;
   padding: 0;
   list-style: none;
   background-color: pink;
-  border-radius: 0 0 0 250px;
-  z-index: 1000; /* under hamburger */
+  border-bottom-left-radius: 300px;
+  z-index: 9;
   display: none;
+  transform: scale(0);
+  transform-origin: top right;
+  pointer-events: none;
 }
 
 .showMenu {
   display: block;
+  animation: boingOut 0.5s ease-out forwards;
+}
+
+.hideMenu{
+  display: block;
+  animation: boingIn 0.4s ease-out forwards;
+}
+
+@keyframes boingOut {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes boingIn {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 
 .menuItem {
