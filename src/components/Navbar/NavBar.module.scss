@@ -90,13 +90,12 @@
 }
 
 .menuItem {
-  padding: 10px 0;
+  font-family: "Reenie Beanie", cursive;
   color: black;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .menuItem:hover {
-  background-color: rgb(242, 174, 185);
+  background-color: rgb(246, 199, 207);
   font-weight: 600;
 }

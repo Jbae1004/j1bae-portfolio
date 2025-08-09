@@ -1,16 +1,16 @@
 .banner {
   display: grid;
-  grid-template-columns: 1fr 1fr;   // two columns side by side on large screens
-  grid-template-rows: 1fr;          // one row on large screens
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
   width: 100%;
   height: 400px;
   box-sizing: border-box;
   overflow: hidden;
 
   @media (max-width: 600px) {
-    grid-template-columns: 1fr;    // single column on small screens
-    grid-template-rows: auto auto; // two rows stacked vertically
-    height: auto;                  // let height grow naturally to fit content
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto;
+    height: auto;
   }
 }
 
@@ -23,9 +23,9 @@
   grid-row: 1;
 
   @media (max-width: 600px) {
-    max-height: 250px;     // smaller max height on small screens
+    max-height: 250px;
     grid-column: 1;
-    grid-row: 1;           // first row on small screens
+    grid-row: 1; 
   }
 }
 
@@ -44,7 +44,7 @@
 
   @media (max-width: 600px) {
     grid-column: 1;
-    grid-row: 2;           // second row on small screens
+    grid-row: 2;      
     padding: 0.5rem 1rem;
   }
 }
