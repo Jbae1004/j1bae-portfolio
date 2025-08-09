@@ -1,5 +1,4 @@
-$primary-color: #E4E0E1;
-$secondary-color: white;
+$primary-color: rgb(239, 231, 230);
 $border-thickness: 80px;
 
 .body {
@@ -7,34 +6,47 @@ $border-thickness: 80px;
   min-height: 100vh;
   min-width: 100vw;
   overflow: hidden;
-  background-color: $primary-color;
 }
 
 .border-x {
   position: fixed;
-   width: 100vw;
+  width: 100vw;
   height: $border-thickness;
   //  z-index: 100;
-   pointer-events: none;
-   background-size: cover;
-   background-image: url('~assets/images/TBborder.png');
+  pointer-events: none;
+  background-size: cover;
+  background-image: url("~assets/images/TBborder.png");
 }
 
-.topBorder { @extend .border-x; top: 0 }
-.bottomBorder { @extend .border-x; bottom: 0; }
+.topBorder {
+  @extend .border-x;
+  top: 0;
+}
+
+.bottomBorder {
+  @extend .border-x;
+  bottom: 0;
+}
 
 .border-y {
   position: fixed;
-   width: $border-thickness;
+  width: $border-thickness;
   height: 100vh;
   //  z-index: 100;
-   pointer-events: none;
-   background-size: cover;
-   background-image: url('~assets/images/LRborder.png');
+  pointer-events: none;
+  background-size: cover;
+  background-image: url("~assets/images/LRborder.png");
 }
 
-.leftBorder { @extend .border-y; left: 0 }
-.rightBorder { @extend .border-y; right: 0 }
+.leftBorder {
+  @extend .border-y;
+  left: 0;
+}
+
+.rightBorder {
+  @extend .border-y;
+  right: 0;
+}
 
 .container {
   position: absolute;
@@ -45,44 +57,44 @@ $border-thickness: 80px;
   padding: 50;
   overflow-y: auto;
   box-sizing: border-box;
-  background-color: $secondary-color;
+  background-color: $primary-color;
   border-radius: 20px;
 }
 
-@media (max-width: 900px) {
-  $border-thickness: 30px;
+// @media (max-width: 900px) {
+//   $border-thickness: 30px;
 
-  .leftBorder, .rightBorder {
-    width: $border-thickness;
-  }
-  .topBorder, .bottomBorder {
-    height: $border-thickness;
-  }
-  .container {
-    top: $border-thickness;
-    left: $border-thickness;
-    right: $border-thickness;
-    bottom: $border-thickness;
-    padding: 16px;
-    border-radius: 10px;
-  }
-}
+//   .leftBorder, .rightBorder {
+//     width: $border-thickness;
+//   }
+//   .topBorder, .bottomBorder {
+//     height: $border-thickness;
+//   }
+//   .container {
+//     top: $border-thickness;
+//     left: $border-thickness;
+//     right: $border-thickness;
+//     bottom: $border-thickness;
+//     padding: 16px;
+//     border-radius: 10px;
+//   }
+// }
 
-@media (max-width: 600px) {
-  $border-thickness: 40px;
+// @media (max-width: 600px) {
+//   $border-thickness: 40px;
 
-  .leftBorder, .rightBorder {
-    width: $border-thickness;
-  }
-  .topBorder, .bottomBorder {
-    height: $border-thickness;
-  }
-  .container {
-    top: $border-thickness;
-    left: $border-thickness;
-    right: $border-thickness;
-    bottom: $border-thickness;
-    padding: 6px;
-    border-radius: 6px;
-  }
-}
+//   .leftBorder, .rightBorder {
+//     width: $border-thickness;
+//   }
+//   .topBorder, .bottomBorder {
+//     height: $border-thickness;
+//   }
+//   .container {
+//     top: $border-thickness;
+//     left: $border-thickness;
+//     right: $border-thickness;
+//     bottom: $border-thickness;
+//     padding: 6px;
+//     border-radius: 6px;
+//   }
+// }

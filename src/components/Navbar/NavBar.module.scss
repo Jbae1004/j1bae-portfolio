@@ -8,7 +8,6 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  
 }
 
 .bar {
@@ -38,7 +37,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: pink;
+  background-color: rgb(241, 217, 221);
   border-bottom-left-radius: 300px;
   z-index: 9;
   display: none;
@@ -50,11 +49,14 @@
 .showMenu {
   display: block;
   animation: boingOut 0.5s ease-out forwards;
+  pointer-events: auto;
 }
 
 .hideMenu{
   display: block;
   animation: boingIn 0.4s ease-out forwards;
+  pointer-events: none;
+
 }
 
 @keyframes boingOut {

@@ -3,25 +3,37 @@ import styles from "./NavBar.module.scss";
 
 const menuNames = ["Home", "About", "Skills", "Contact"];
 
-export default function NavBar() {
+export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasToggled, setHasToggled] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+    setHasToggled(true);
+  };
+
+  const menuClass = `${styles.menu} ${
+    isOpen
+      ? hasToggled
+        ? styles.showMenu
+        : ""
+      : hasToggled
+      ? styles.hideMenu
+      : ""
+  }`;
 
   return (
     <>
       <div
         className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleMenu}
       >
         {[1, 2, 3].map((_bar) => (
-          <span className={styles.bar} />
+          <span key={_bar} className={styles.bar} />
         ))}
       </div>
 
-      <ul
-        className={`${styles.menu} ${
-          isOpen ? styles.showMenu : styles.hideMenu
-        }`}
-      >
+      <ul className={menuClass}>
         {menuNames.map((name) => (
           <li key={name} className={styles.menuItem}>
             {name}
@@ -30,4 +42,5 @@ export default function NavBar() {
       </ul>
     </>
   );
-}
+};
+export default NavBar;
