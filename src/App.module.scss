@@ -1,4 +1,4 @@
-$primary-color: rgb(239, 231, 230);
+$primary-color: #FCFAEE;
 $border-thickness: 80px;
 
 .body {
@@ -6,47 +6,48 @@ $border-thickness: 80px;
   min-height: 100vh;
   min-width: 100vw;
   overflow: hidden;
+  background-color: #A5B68D;
 }
 
-.border-x {
-  position: fixed;
-  width: 100vw;
-  height: $border-thickness;
-  //  z-index: 100;
-  pointer-events: none;
-  background-size: cover;
-  background-image: url("~assets/images/TBborder.png");
-}
+// .border-x {
+//   position: fixed;
+//   width: 100vw;
+//   height: $border-thickness;
+//   //  z-index: 100;
+//   pointer-events: none;
+//   background-size: cover;
+//   background-image: url("~assets/images/TBborder.png");
+// }
 
-.topBorder {
-  @extend .border-x;
-  top: 0;
-}
+// .topBorder {
+//   @extend .border-x;
+//   top: 0;
+// }
 
-.bottomBorder {
-  @extend .border-x;
-  bottom: 0;
-}
+// .bottomBorder {
+//   @extend .border-x;
+//   bottom: 0;
+// }
 
-.border-y {
-  position: fixed;
-  width: $border-thickness;
-  height: 100vh;
-  //  z-index: 100;
-  pointer-events: none;
-  background-size: cover;
-  background-image: url("~assets/images/LRborder.png");
-}
+// .border-y {
+//   position: fixed;
+//   width: $border-thickness;
+//   height: 100vh;
+//   //  z-index: 100;
+//   pointer-events: none;
+//   background-size: cover;
+//   background-image: url("~assets/images/LRborder.png");
+// }
 
-.leftBorder {
-  @extend .border-y;
-  left: 0;
-}
+// .leftBorder {
+//   @extend .border-y;
+//   left: 0;
+// }
 
-.rightBorder {
-  @extend .border-y;
-  right: 0;
-}
+// .rightBorder {
+//   @extend .border-y;
+//   right: 0;
+// }
 
 .container {
   position: absolute;

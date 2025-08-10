@@ -17,13 +17,15 @@
   transition: all 0.3s ease;
   z-index: 10;
 }
- 
+
 .open .bar:nth-child(1) {
   transform: rotate(45deg) translate(3px, 1px);
 }
+
 .open .bar:nth-child(2) {
   opacity: 0;
 }
+
 .open .bar:nth-child(3) {
   transform: rotate(-45deg) translate(10px, -10px);
 }
@@ -32,15 +34,18 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 250px;
   margin: 0;
-  padding: 0;
   list-style: none;
-  background-color: rgb(241, 217, 221);
+  background-color: #ecdfcc;
   border-bottom-left-radius: 300px;
   z-index: 9;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 80px;
   transform: scale(0);
   transform-origin: top right;
   pointer-events: none;
@@ -52,23 +57,25 @@
   pointer-events: auto;
 }
 
-.hideMenu{
+.hideMenu {
   display: block;
   animation: boingIn 0.4s ease-out forwards;
   pointer-events: none;
-
 }
 
 @keyframes boingOut {
   0% {
     transform: scale(0);
   }
+
   60% {
     transform: scale(1.15);
   }
+
   80% {
     transform: scale(0.95);
   }
+
   100% {
     transform: scale(1);
   }
@@ -78,24 +85,53 @@
   0% {
     transform: scale(1);
   }
+
   60% {
     transform: scale(1.15);
   }
+
   80% {
     transform: scale(0.95);
   }
+
   100% {
     transform: scale(0);
   }
 }
 
 .menuItem {
-  font-family: "Reenie Beanie", cursive;
+  font-family: "Caveat Brush", cursive;
+  font-size: 25px;
   color: black;
   cursor: pointer;
+  text-align: center;
+  padding-left: 10px;
+  height: 40px;
+  position: relative;
+  text-decoration: none;
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  transition: letter-spacing 0.5s ease;
 }
 
 .menuItem:hover {
-  background-color: rgb(246, 199, 207);
-  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.menuItem::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #a5b68d, #d6e2c7);
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menuItem:hover::before {
+  width: 100%;
+  border-radius: 50px;
 }
