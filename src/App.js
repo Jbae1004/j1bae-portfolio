@@ -7,10 +7,10 @@ import { Banner, NavBar } from "./components";
 export default function App() {
   return (
     <div className={styles.body}>
-      <div className={styles.leftBorder} />
+      {/* <div className={styles.leftBorder} />
       <div className={styles.rightBorder} />
       <div className={styles.topBorder} />
-      <div className={styles.bottomBorder} />
+      <div className={styles.bottomBorder} /> */}
       <div className={styles.container}>
         <NavBar />
         <Banner />
