@@ -1,0 +1,36 @@
+.leftBorder,
+.rightBorder,
+.topBorder,
+.bottomBorder {
+  position: fixed;
+  background: #b1b1b1;
+  z-index: 100;
+}
+
+.leftBorder {
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100vh;
+}
+
+.rightBorder {
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100vh;
+}
+
+.topBorder {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8px;
+}
+
+.bottomBorder {
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 8px;
+}
