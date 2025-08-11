@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.scss";
+import { Columns } from "react-bootstrap-icons";
 
 const menuNames = ["Home", "About", "Skills", "Contact"];
 
@@ -23,16 +24,7 @@ export const NavBar = () => {
   }`;
 
   return (
-    <>
-      <div
-        className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
-        onClick={toggleMenu}
-      >
-        {[1, 2, 3].map((_bar) => (
-          <span key={_bar} className={styles.bar} />
-        ))}
-      </div>
-
+    <div style={{ display: "flex", justifyContent: "end" }}>
       <ul className={menuClass}>
         {menuNames.map((name) => (
           <li key={name} className={styles.menuItem}>
@@ -40,7 +32,18 @@ export const NavBar = () => {
           </li>
         ))}
       </ul>
-    </>
+
+      <div style={{ display: "flex", justifyContent: "end" }}>
+        <div
+          className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
+          onClick={toggleMenu}
+        >
+          {[1, 2, 3].map((_bar) => (
+            <span key={_bar} className={styles.bar} />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 export default NavBar;

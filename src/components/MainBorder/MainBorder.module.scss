@@ -1,36 +1,82 @@
-.leftBorder,
-.rightBorder,
-.topBorder,
-.bottomBorder {
-  position: fixed;
-  background: #b1b1b1;
-  z-index: 100;
-}
+// .leftBorder,
+// .rightBorder,
+// .topBorder,
+// .bottomBorder {
+//   position: fixed;
+//   background: #b1b1b1;
+//   z-index: 100;
+// }
 
-.leftBorder {
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 100vh;
-}
+// .leftBorder {
+//   top: 0;
+//   left: 0;
+//   width: 8px;
+//   height: 100vh;
+// }
 
-.rightBorder {
-  top: 0;
-  right: 0;
-  width: 8px;
-  height: 100vh;
-}
+// .rightBorder {
+//   top: 0;
+//   right: 0;
+//   width: 8px;
+//   height: 100vh;
+// }
 
-.topBorder {
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 8px;
-}
+// .topBorder {
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 8px;
+// }
 
-.bottomBorder {
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 8px;
-}
+// .bottomBorder {
+//   bottom: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 8px;
+// }
+
+
+
+// From App.module.scss
+
+
+
+// .border-x {
+//   position: fixed;
+//   width: 100vw;
+//   height: $border-thickness;
+//   //  z-index: 100;
+//   pointer-events: none;
+//   background-size: cover;
+//   background-image: url("~assets/images/TBborder.png");
+// }
+
+// .topBorder {
+//   @extend .border-x;
+//   top: 0;
+// }
+
+// .bottomBorder {
+//   @extend .border-x;
+//   bottom: 0;
+// }
+
+// .border-y {
+//   position: fixed;
+//   width: $border-thickness;
+//   height: 100vh;
+//   //  z-index: 100;
+//   pointer-events: none;
+//   background-size: cover;
+//   background-image: url("~assets/images/LRborder.png");
+// }
+
+// .leftBorder {
+//   @extend .border-y;
+//   left: 0;
+// }
+
+// .rightBorder {
+//   @extend .border-y;
+//   right: 0;
+// }

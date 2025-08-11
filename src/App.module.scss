@@ -5,49 +5,25 @@ $border-thickness: 80px;
   position: relative;
   min-height: 100vh;
   min-width: 100vw;
-  overflow: hidden;
+  overflow-y: hidden;
   background-color: #A5B68D;
 }
 
-// .border-x {
-//   position: fixed;
-//   width: 100vw;
-//   height: $border-thickness;
-//   //  z-index: 100;
-//   pointer-events: none;
-//   background-size: cover;
-//   background-image: url("~assets/images/TBborder.png");
-// }
+.scrollSnapContainer {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
 
-// .topBorder {
-//   @extend .border-x;
-//   top: 0;
-// }
-
-// .bottomBorder {
-//   @extend .border-x;
-//   bottom: 0;
-// }
-
-// .border-y {
-//   position: fixed;
-//   width: $border-thickness;
-//   height: 100vh;
-//   //  z-index: 100;
-//   pointer-events: none;
-//   background-size: cover;
-//   background-image: url("~assets/images/LRborder.png");
-// }
-
-// .leftBorder {
-//   @extend .border-y;
-//   left: 0;
-// }
-
-// .rightBorder {
-//   @extend .border-y;
-//   right: 0;
-// }
+.snapSection {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .container {
   position: absolute;
@@ -61,6 +37,8 @@ $border-thickness: 80px;
   background-color: $primary-color;
   border-radius: 20px;
 }
+
+
 
 // @media (max-width: 900px) {
 //   $border-thickness: 30px;
