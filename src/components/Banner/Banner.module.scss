@@ -1,50 +1,78 @@
 .banner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  width: 100%;
-  height: 400px;
-  box-sizing: border-box;
-  overflow: hidden;
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr; 
-    grid-template-rows: auto auto;
-    height: auto;
-  }
-}
-
-.bannerImage {
-  width: 100%;
-  height: 100%;
-  max-height: 400px;
-  object-fit: contain;
-  grid-column: 1;
-  grid-row: 1;
-
-  @media (max-width: 600px) {
-    max-height: 250px;
-    grid-column: 1;
-    grid-row: 1; 
-  }
-}
-
-.textContainer {
-  grid-column: 2;
-  grid-row: 1;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  font-family: 'Caveat Brush', cursive;
-  font-size: clamp(16px, 3vw, 30px);
   text-align: center;
-  color: black;
-  overflow-wrap: break-word;
-
-  @media (max-width: 600px) {
-    grid-column: 1;
-    grid-row: 2;      
-    padding: 0.5rem 1rem;
-  }
+  // padding: 0 20px;
 }
+
+.textContainer {
+  // display: flex;
+  // flex-direction: column;
+  align-items: center;
+}
+
+.gaegu {
+  font-family: "Gaegu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jua {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+// .banner {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 1fr;
+//   width: 100%;
+//   height: 400px;
+//   box-sizing: border-box;
+//   overflow: hidden;
+
+//   @media (max-width: 600px) {
+//     grid-template-columns: 1fr; 
+//     grid-template-rows: auto auto;
+//     height: auto;
+//   }
+// }
+
+// .bannerImage {
+//   width: 100%;
+//   height: 100%;
+//   max-height: 400px;
+//   object-fit: contain;
+//   grid-column: 1;
+//   grid-row: 1;
+
+//   @media (max-width: 600px) {
+//     max-height: 250px;
+//     grid-column: 1;
+//     grid-row: 1; 
+//   }
+// }
+
+// .textContainer {
+//   grid-column: 2;
+//   grid-row: 1;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 1rem;
+//   font-family: 'Caveat Brush', cursive;
+//   font-size: clamp(16px, 3vw, 30px);
+//   text-align: center;
+//   color: black;
+//   overflow-wrap: break-word;
+
+//   @media (max-width: 600px) {
+//     grid-column: 1;
+//     grid-row: 2;      
+//     padding: 0.5rem 1rem;
+//   }
+// }

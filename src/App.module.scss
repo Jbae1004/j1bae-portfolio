@@ -9,7 +9,7 @@ $border-thickness: 80px;
   background-color: #A5B68D;
 }
 
-.scrollSnapContainer {
+.scrollSnapCotainer {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -37,8 +37,6 @@ $border-thickness: 80px;
   background-color: $primary-color;
   border-radius: 20px;
 }
-
-
 
 // @media (max-width: 900px) {
 //   $border-thickness: 30px;
