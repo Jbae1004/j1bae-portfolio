@@ -4,20 +4,28 @@ import styles from "./Banner.module.scss";
 
 export const Banner = () => {
   return (
+    // <section id="home" className={styles.banner}>
+    //   {/* <img src={logo2} alt="Portfolio Logo" className={styles.bannerImage} /> */}
+    //   <div className={styles.textContainer}>
+    //     <h1 className={styles.jua}>
+    //       Hi, I&apos;m<span className={styles.gaegu}> Jiwon</span>
+    //     </h1>
+    //     <p className={styles.gaegu}>
+    //       Welcome<span className={styles.jua}>&nbsp;to my&nbsp;</span>portfolio!
+    //     </p>
+    //   </div>
+    // </section>
+
     <section id="home" className={styles.banner}>
-      {/* <img src={logo2} alt="Portfolio Logo" className={styles.bannerImage} /> */}
       <div className={styles.textContainer}>
-        <h1>
-          <span className={styles.jua}> Hi, I'm</span> {""}
-          <span className={styles.gaegu}> Jiwon</span>
-        </h1>
-        <p>
-          <span className={styles.gaegu}> Welcome</span> {""}
-          <span className={styles.jua}> to my </span> {""}
-          <span className={styles.gaegu}> portfolio! </span> {""}
+        <h1 className={styles.gaegu}>
+          Hi, I&apos;m&nbsp;Jiwon</h1>
+        <p className={styles.gaegu}>
+          Welcome&nbsp;to my&nbsp;portfolio!
         </p>
       </div>
     </section>
+
   );
 };
 
