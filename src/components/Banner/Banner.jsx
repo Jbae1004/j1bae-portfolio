@@ -4,18 +4,6 @@ import styles from "./Banner.module.scss";
 
 export const Banner = () => {
   return (
-    // <section id="home" className={styles.banner}>
-    //   {/* <img src={logo2} alt="Portfolio Logo" className={styles.bannerImage} /> */}
-    //   <div className={styles.textContainer}>
-    //     <h1 className={styles.jua}>
-    //       Hi, I&apos;m<span className={styles.gaegu}> Jiwon</span>
-    //     </h1>
-    //     <p className={styles.gaegu}>
-    //       Welcome<span className={styles.jua}>&nbsp;to my&nbsp;</span>portfolio!
-    //     </p>
-    //   </div>
-    // </section>
-
     <section id="home" className={styles.banner}>
       <div className={styles.textContainer}>
         <h1 className={styles.gaegu}>
@@ -25,7 +13,6 @@ export const Banner = () => {
         </p>
       </div>
     </section>
-
   );
 };
 

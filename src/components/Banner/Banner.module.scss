@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .textContainer {
@@ -11,18 +10,17 @@
 }
 
 .textContainer h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 0;
 }
 
 .textContainer p {
-  font-size: 1.5rem;
+  font-size: 3rem;
   margin-top: 0.5rem;
 }
 
 .gaegu {
   font-family: "Gaegu", sans-serif;
-  font-size: 200px;
   font-weight: 400;
   font-style: normal;
 }
