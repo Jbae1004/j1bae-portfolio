@@ -4,18 +4,22 @@
   justify-content: center;
   align-items: center;
 }
+.bannerImage{
+  width: 400px;
+  height: auto;
+}
 
 .textContainer {
   text-align: center;
 }
 
 .textContainer h1 {
-  font-size: 5rem;
+  font-size: 50px;
   margin: 0;
 }
 
 .textContainer p {
-  font-size: 3rem;
+  font-size: 30px;
   margin-top: 0.5rem;
 }
 

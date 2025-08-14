@@ -1,19 +1,24 @@
-$primary-color: #FCFAEE;
+$primary-color: #edeef5;
 $border-thickness: 80px;
 
 .body {
   position: relative;
   min-height: 100vh;
   min-width: 100vw;
-  overflow-y: hidden;
-  background-color: #A5B68D;
+  overflow: hidden;
+  background-color: #c8c9d6;
 }
 
-.scrollSnapCotainer {
-  height: 100vh;
+.scrollSnapContainer {
+  flex: 1;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .snapSection {
@@ -32,10 +37,13 @@ $border-thickness: 80px;
   right: $border-thickness;
   bottom: $border-thickness;
   padding: 50;
-  overflow-y: auto;
   box-sizing: border-box;
   background-color: $primary-color;
   border-radius: 20px;
+  overflow: hidden;
+
+  display:flex;
+  flex-direction: column;
 }
 
 // @media (max-width: 900px) {
