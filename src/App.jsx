@@ -7,9 +7,7 @@ export default function App() {
     <div className={styles.body}>
       <MainBorder />
       <div className={styles.container}>
-        <div>
-          <NavBar />
-        </div>
+        <NavBar />
         <div className={styles.scrollSnapContainer}>
           <section className={styles.snapSection}>
             <Banner />
