@@ -1,16 +1,20 @@
 .banner {
-  height: 100vh;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.bannerImage{
-  width: 400px;
-  height: auto;
+  text-align: center;
 }
 
-.textContainer {
-  text-align: center;
+.bannerImage{
+  width: 100px;
+  height: 100px;
+  padding: 24px;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 
 .textContainer h1 {
@@ -20,11 +24,20 @@
 
 .textContainer p {
   font-size: 30px;
-  margin-top: 0.5rem;
+  margin-top: 10px;
 }
 
 .gaegu {
   font-family: "Gaegu", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
+}
+
+@media (max-width: 600px) {
+  .textContainer h1 {
+    font-size: 30px;
+  }
+  .textContainer p {
+    font-size: 20px;
+  }
 }

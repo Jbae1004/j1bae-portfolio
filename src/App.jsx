@@ -6,8 +6,10 @@ export default function App() {
   return (
     <div className={styles.body}>
       <MainBorder />
+
       <div className={styles.container}>
         <NavBar />
+
         <div className={styles.scrollSnapContainer}>
           <section className={styles.snapSection}>
             <Banner />
@@ -20,6 +22,6 @@ export default function App() {
           </section>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

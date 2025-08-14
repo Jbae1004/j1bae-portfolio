@@ -13,15 +13,14 @@ export const NavBar = () => {
     setHasToggled(true);
   };
 
-  const menuClass = `${styles.menu} ${
-    isOpen
-      ? hasToggled
-        ? styles.showMenu
-        : ""
-      : hasToggled
+  const menuClass = `${styles.menu} ${isOpen
+    ? hasToggled
+      ? styles.showMenu
+      : ""
+    : hasToggled
       ? styles.hideMenu
       : ""
-  }`;
+    }`;
 
   return (
     <div style={{ display: "flex", justifyContent: "end" }}>

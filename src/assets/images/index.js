@@ -3,3 +3,5 @@ export { default as logo2 } from './logo2.png'
 export { default as logo3 } from './logo3.png'
 export { default as lr } from './LRborder.png'
 export { default as tb } from './TBborder.png'
+
+export { default as bannerIcon } from './BannerIcon.gif'
