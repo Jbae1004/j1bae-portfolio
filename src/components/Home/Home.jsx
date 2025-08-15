@@ -6,11 +6,8 @@ export const Home = () => {
     <div id="home" className={styles.home}>
       <img src={HomeIcon} alt="Portfolio Logo" className={styles.HomeIcon} />
       <div className={styles.textContainer}>
-        <h1 className={styles.gaegu}>
-          Hi, I&apos;m&nbsp;Jiwon</h1>
-        <p className={styles.gaegu}>
-          Welcome&nbsp;to my&nbsp;portfolio!
-        </p>
+        <h1 className={styles.gaegu}>Hi, I&apos;m&nbsp;Jiwon</h1>
+        <p className={styles.gaegu}>Welcome&nbsp;to my&nbsp;portfolio!</p>
       </div>
     </div>
   );

@@ -1,19 +1,12 @@
 .home {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
 
-.HomeImage{
-  width: 100px;
-  height: 100px;
-  padding: 24px;
-
-  @media (max-width: 600px) {
-    display: none;
-  }
+  border: 1px solid red;
 }
 
 .textContainer h1 {

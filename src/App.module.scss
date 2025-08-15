@@ -9,7 +9,6 @@ $border-thickness: 80px;
 }
 
 .scrollSnapContainer {
-  flex: 1;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -35,50 +34,12 @@ $border-thickness: 80px;
   left: $border-thickness;
   right: $border-thickness;
   bottom: $border-thickness;
-  padding: 0;
-  box-sizing: border-box;
   background-color: #edeef5;
   border-radius: 20px;
   overflow: hidden;
-
+  
   display:flex;
   flex-direction: column;
+  
+  border: 2px solid black;
 }
-
-// @media (max-width: 900px) {
-//   $border-thickness: 30px;
-
-//   .leftBorder, .rightBorder {
-//     width: $border-thickness;
-//   }
-//   .topBorder, .bottomBorder {
-//     height: $border-thickness;
-//   }
-//   .container {
-//     top: $border-thickness;
-//     left: $border-thickness;
-//     right: $border-thickness;
-//     bottom: $border-thickness;
-//     padding: 16px;
-//     border-radius: 10px;
-//   }
-// }
-
-// @media (max-width: 600px) {
-//   $border-thickness: 40px;
-
-//   .leftBorder, .rightBorder {
-//     width: $border-thickness;
-//   }
-//   .topBorder, .bottomBorder {
-//     height: $border-thickness;
-//   }
-//   .container {
-//     top: $border-thickness;
-//     left: $border-thickness;
-//     right: $border-thickness;
-//     bottom: $border-thickness;
-//     padding: 6px;
-//     border-radius: 6px;
-//   }
-// }

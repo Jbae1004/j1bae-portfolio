@@ -1,6 +1,6 @@
 import styles from "./App.module.scss";
-import { Home, NavBar, MainBorder } from "./components";
-import { About, Contact } from "./pages";
+import { Home, NavBar, MainBorder, SocialHeaders } from "./components";
+import { AAbout, Contact } from "./pages";
 // import clsx from 'clsx';
 
 export default function App() {
@@ -9,14 +9,15 @@ export default function App() {
       <MainBorder />
 
       <div className={styles.container}>
+        <SocialHeaders />
         <NavBar />
         <div className={styles.scrollSnapContainer}>
           <section className={styles.snapSection}>
             <Home />
           </section>
-          {/* <section className={styles.snapSection}>
-            <About />
-          </section> */}
+          <section className={styles.snapSection}>
+            <AAbout />
+          </section>
 
           {/* <section className={clsx(styles.snapSection, styles.aboutSection)}>
             <About />
@@ -28,6 +29,6 @@ export default function App() {
           </section>
         </div>
       </div>
-    </div >
+    </div>
   );
 }

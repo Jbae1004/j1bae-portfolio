@@ -87,6 +87,7 @@ const About = () => {
         color: "white",
         // padding: "50px 75px",
         backgroundColor: "#75716eff",
+
       }}
       id="about"
     >
