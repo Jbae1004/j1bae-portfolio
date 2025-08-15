@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./NavBar.module.scss";
-import { Columns } from "react-bootstrap-icons";
+// import { Columns } from "react-bootstrap-icons";
 
 const menuNames = ["Home", "About", "Skills", "Contact"];
 

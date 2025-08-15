@@ -4,7 +4,7 @@ import styles from "./Banner.module.scss";
 
 export const Banner = () => {
   return (
-    <section id="home" className={styles.banner}>
+    <div id="home" className={styles.banner}>
       <img src={bannerIcon} alt="Portfolio Logo" className={styles.bannerImage} />
       <div className={styles.textContainer}>
         <h1 className={styles.gaegu}>
@@ -13,7 +13,7 @@ export const Banner = () => {
           Welcome&nbsp;to my&nbsp;portfolio!
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -77,15 +77,15 @@ const TAB_DATA = [
 const About = () => {
   const [tab, setTab] = useState("programming-languages");
 
-  const handleTabChange = (id) => {
-    setTab(id);
-  };
+  // const handleTabChange = (id) => {
+  //   setTab(id);
+  // };
 
   return (
     <section
       style={{
         color: "white",
-        padding: "50px 75px",
+        // padding: "50px 75px",
         backgroundColor: "#75716eff",
       }}
       id="about"
@@ -163,7 +163,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
