@@ -4,4 +4,4 @@ export { default as logo3 } from './logo3.png'
 export { default as lr } from './LRborder.png'
 export { default as tb } from './TBborder.png'
 
-export { default as bannerIcon } from './BannerIcon.gif'
+export { default as HomeIcon } from './HomeIcon.gif'
