@@ -9,11 +9,10 @@ export default function ScrollHint() {
         if (aboutSection) {
             aboutSection.scrollIntoView({ behavior: "smooth" });
         }
-        setVisible(false); // hide after click
+        setVisible(false);
     };
 
     const handleScroll = (e) => {
-        // This checks the container's scroll position instead of window.scrollY
         if (e.target.scrollTop === 0) {
             setVisible(true);
         } else {
@@ -22,7 +21,7 @@ export default function ScrollHint() {
     };
 
     useEffect(() => {
-        const scrollContainer = document.getElementById('hello');
+        const scrollContainer = document.getElementById('hint');
         if (scrollContainer) {
             scrollContainer.addEventListener("scroll", handleScroll);
             return () => scrollContainer.removeEventListener("scroll", handleScroll);

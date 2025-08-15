@@ -1,0 +1,24 @@
+.crumbs {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+  all: unset;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.icon:hover { transform: scale(1.06);}
+.active { transform: scale(1.1);}

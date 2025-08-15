@@ -1,5 +1,5 @@
 import styles from "./App.module.scss";
-import { Home, NavBar, MainBorder, SocialHeaders, ScrollHint } from "./components";
+import { Home, NavBar, MainBorder, SocialHeaders, ScrollHint, BreadCrumbs } from "./components";
 import { About, Contact } from "./pages";
 // import clsx from 'clsx';
 
@@ -13,21 +13,22 @@ export default function App() {
         <ScrollHint />
         <NavBar />
 
-        <div id='hello' className={styles.scrollSnapContainer}>
-          <section className={styles.snapSection}>
+        <BreadCrumbs sections={["home", "about", "contact"]} scrollContainerId="hint" />
+
+        <div id='hint' className={styles.scrollSnapContainer}>
+          <section data-section="home" className={styles.snapSection}>
             <Home />
           </section>
 
-          <section className={styles.snapSection}>
+          {/* <section className={styles.snapSection}>
             <About />
-          </section>
+          </section> */}
 
           {/* <section className={clsx(styles.snapSection, styles.aboutSection)}>
             <About />
           </section> */}
 
-
-          <section className={styles.snapSection}>
+          <section data-section="contact" className={styles.snapSection}>
             <Contact />
           </section>
         </div>

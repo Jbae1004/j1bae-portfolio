@@ -1,6 +1,6 @@
 import styles from "./MainBorder.module.scss";
 
-const MainBorder = () => (
+export const MainBorder = () => (
   <>
     <div className={styles.topBorder} />
     <div className={styles.bottomBorder} />
