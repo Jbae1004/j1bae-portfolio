@@ -1,11 +1,11 @@
 .iconBar {
     position: absolute;
-    top: 25px;
-    left: 30px;
+    top: 27px;
+    left: 32px;
     display: flex;
-    gap: 15px;
+    gap: 22px;
     a {
-        color: black;
+        color: rgb(97, 88, 80);
         transition: transform 0.2s ease, color 0.2s ease;
 
         &:hover {
@@ -15,6 +15,6 @@
 }
 
 .iconBar a svg {
-    font-size: 20px;
-    stroke-width: 1.5px;
+    font-size: 23px;
+    stroke-width: 1.8px;
 }
