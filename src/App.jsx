@@ -1,6 +1,6 @@
 import styles from "./App.module.scss";
 import { Home, NavBar, MainBorder, SocialHeaders, ScrollHint } from "./components";
-import { AAbout, Contact } from "./pages";
+import { About, Contact } from "./pages";
 // import clsx from 'clsx';
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
           </section>
 
           <section className={styles.snapSection}>
-            <AAbout />
+            <About />
           </section>
 
           {/* <section className={clsx(styles.snapSection, styles.aboutSection)}>
