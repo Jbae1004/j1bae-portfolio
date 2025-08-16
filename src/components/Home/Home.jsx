@@ -5,8 +5,8 @@ export const Home = () => {
   return (
     <div id="home" className={styles.home}>
       <div className={styles.iconStack}>
-        <img src={HomeIcon1} alt="Duck1" className={styles.iconA} />
-        <img src={HomeIcon2} alt="Duck2" className={styles.iconB} />
+        <img src={HomeIcon1} alt="Duck1" className={styles.duck1} />
+        <img src={HomeIcon2} alt="Duck2" className={styles.duck2} />
       </div>
       <div className={styles.textContainer}>
         <h1 className={styles.gaegu}>Hi, I&apos;m&nbsp;Jiwon</h1>

@@ -9,8 +9,8 @@
 
 .iconStack {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 }
 
 .iconStack img {
@@ -18,15 +18,15 @@
   inset: 0;
 }
 
-.iconA {
-  width: 100px;
-  height: 100px;
+.duck1 {
+  width: 120px;
+  height: 120px;
   animation: fadeA 1.5s steps(1, end) infinite;
 }
 
-.iconB {
-  width: 100px;
-  height: 100px;
+.duck2 {
+  width: 120px;
+  height: 120px;
   animation: fadeB 1.5s steps(1, end) infinite;
 }
 
@@ -42,19 +42,21 @@
 
 .textContainer h1 {
   font-size: 35px;
-  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-weight: 200;
   color: #615850;
 }
 
 .textContainer p {
   font-size: 25px;
-  margin-top: 10px;
+  margin-top: 5px;
+  font-weight: 100;
   color: #615850;
 }
 
 .gaegu {
   font-family: "Gaegu", sans-serif;
-  font-weight: 300;
   font-style: normal;
 }
 

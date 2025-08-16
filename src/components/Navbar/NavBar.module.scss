@@ -49,7 +49,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 65px;
   padding-left: 30px;
   transform: scale(0);
   transform-origin: top right;
@@ -105,38 +105,39 @@
 }
 
 .menuItem {
-  font-family: "Caveat Brush", cursive;
-  font-size: 20px;
+  font-family: "Gaegu", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
   color: rgb(255, 255, 255);
   cursor: pointer;
   text-align: center;
-  height: 35px;
+  height: 30px;
   position: relative;
   text-decoration: none;
   display: block;
   width: max-content;
   margin: 0 auto;
   padding-left: 35px;
-  transition: letter-spacing 0.5s ease;
+  transition: letter-spacing 0.1s ease;
 }
 
 .menuItem:hover {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .menuItem::before {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 15px;
+  left: 33px;
   width: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #a2a5e7, rgb(192, 233, 234));
+  height: 3px;
+  background: linear-gradient(90deg, #9ca4bf, #c8cddb);
   border-radius: 0;
   transition: all 0.3s ease-in-out;
 }
 
 .menuItem:hover::before {
-  width: 100%;
+  width: 60%;
   border-radius: 30%;
 }
