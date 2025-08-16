@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./BreadCrumbs.module.scss";
-import { Crumbs1, Crumbs2 } from "../../assets/icons"
+import { Crumbs1, Crumbs2 } from "../../assets/icons";
 
 export const BreadCrumbs = () => {
     const pages = ["home", "about", "contact"];
