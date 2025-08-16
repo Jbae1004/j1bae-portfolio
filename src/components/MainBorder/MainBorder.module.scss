@@ -7,68 +7,43 @@ $borderX: 80px;
 .rightBorder {
   position: fixed;
   pointer-events: none;
-  z-index: 1000;
 }
 
 .topBorder {
-  top: 0; left: 0; right: 0; height: $borderY;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $borderY;
   background: url("../../assets/images/TBorder.png") repeat-x top center;
-  background-size: auto 100%;
+  background-size: auto 170px;
 }
 .bottomBorder {
-  bottom: 0; left: 0; right: 0; height: $borderY;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $borderY;
   background: url("../../assets/images/BBorder.png") repeat-x bottom center;
-  background-size: auto 100%;
+  background-size: auto 170px;
 }
 
 .leftBorder {
-  top: 0; bottom: 0; left: 0; width: $borderX;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: $borderX;
   background: url("../../assets/images/LBorder.png") repeat-y center left;
-  background-size: 100% auto;
+  background-size: 170px auto;
 }
 .rightBorder {
-  top: 0; bottom: 0; right: 0; width: $borderX;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: $borderX;
   background: url("../../assets/images/RBorder.png") repeat-y center right;
-  background-size: 100% auto;
+  background-size: 170px auto;
 }
 // .corner { position: fixed; width: $borderX; height: $borderY; pointer-events:none; z-index:1001; background-size: cover; background-repeat: no-repeat; }
 // .cornerTL { top:0; left:0;    background-image:url("../../assets/images/corner-TL.png"); }
 // .cornerTR { top:0; right:0;   background-image:url("../../assets/images/corner-TR.png"); }
 // .cornerBL { bottom:0; left:0; background-image:url("../../assets/images/corner-BL.png"); }
 // .cornerBR { bottom:0; right:0;background-image:url("../../assets/images/corner-BR.png"); }
-
-.appBody {
-  background: #c8c9d6;
-  min-height: 100vh;
-}
-
-.contentShell {
-  position: fixed;
-  top: $borderY; bottom: $borderY; left: $borderX; right: $borderX;
-  z-index: 1;
-  display: grid;
-}
-
-.contentPanel {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 1px 0 rgba(0,0,0,.05) inset;
-  overflow: hidden;
-}
-
-.scrollSnapContainer {
-  height: 100%;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-
-  scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
-}
-
-.snapSection {
-  min-height: 100%;
-  scroll-snap-align: start;
-  display: grid;
-  place-items: center;
-}
