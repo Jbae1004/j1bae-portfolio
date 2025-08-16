@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./BreadCrumbs.module.scss";
-import { heartIcon1, heartIcon2 } from "../../assets/icons"
+import { Crumbs1, Crumbs2 } from "../../assets/icons"
 
 export const BreadCrumbs = () => {
     const pages = ["home", "about", "contact"];
@@ -42,7 +42,7 @@ export const BreadCrumbs = () => {
                         aria-label={`Go to ${page}`}
                     >
                         <img
-                            src={active ? heartIcon2 : heartIcon1}
+                            src={active ? Crumbs2 : Crumbs1}
                             alt=""
                             className={`${styles.icon} ${active ? styles.active : ""}`}
                             draggable={false}

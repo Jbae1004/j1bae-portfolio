@@ -1,39 +1,74 @@
-$border-thickness: 70px;
+$borderY: 80px;
+$borderX: 80px;
 
-.border-x {
+.topBorder,
+.bottomBorder,
+.leftBorder,
+.rightBorder {
   position: fixed;
-  width: 100vw;
-  height: $border-thickness;
   pointer-events: none;
-  background-size: cover;
-  background-image: url("../../assets/images/TBborder.png");
+  z-index: 1000;
 }
 
 .topBorder {
-  @extend .border-x;
-  top: 0;
+  top: 0; left: 0; right: 0; height: $borderY;
+  background: url("../../assets/images/TBorder.png") repeat-x top center;
+  background-size: auto 100%;
 }
-
 .bottomBorder {
-  @extend .border-x;
-  bottom: 0;
-}
-
-.border-y {
-  position: fixed;
-  width: $border-thickness;
-  height: 100vh;
-  pointer-events: none;
-  background-size: cover;
-  background-image: url("../../assets/images/LRborder.png");
+  bottom: 0; left: 0; right: 0; height: $borderY;
+  background: url("../../assets/images/BBorder.png") repeat-x bottom center;
+  background-size: auto 100%;
 }
 
 .leftBorder {
-  @extend .border-y;
-  left: 0;
+  top: 0; bottom: 0; left: 0; width: $borderX;
+  background: url("../../assets/images/LBorder.png") repeat-y center left;
+  background-size: 100% auto;
+}
+.rightBorder {
+  top: 0; bottom: 0; right: 0; width: $borderX;
+  background: url("../../assets/images/RBorder.png") repeat-y center right;
+  background-size: 100% auto;
+}
+// .corner { position: fixed; width: $borderX; height: $borderY; pointer-events:none; z-index:1001; background-size: cover; background-repeat: no-repeat; }
+// .cornerTL { top:0; left:0;    background-image:url("../../assets/images/corner-TL.png"); }
+// .cornerTR { top:0; right:0;   background-image:url("../../assets/images/corner-TR.png"); }
+// .cornerBL { bottom:0; left:0; background-image:url("../../assets/images/corner-BL.png"); }
+// .cornerBR { bottom:0; right:0;background-image:url("../../assets/images/corner-BR.png"); }
+
+.appBody {
+  background: #c8c9d6;
+  min-height: 100vh;
 }
 
-.rightBorder {
-  @extend .border-y;
-  right: 0;
+.contentShell {
+  position: fixed;
+  top: $borderY; bottom: $borderY; left: $borderX; right: $borderX;
+  z-index: 1;
+  display: grid;
+}
+
+.contentPanel {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.05) inset;
+  overflow: hidden;
+}
+
+.scrollSnapContainer {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+.snapSection {
+  min-height: 100%;
+  scroll-snap-align: start;
+  display: grid;
+  place-items: center;
 }

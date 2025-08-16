@@ -1,2 +1,2 @@
-export { default as heartIcon1 } from './heartIcon1.png'
-export { default as heartIcon2 } from './heartIcon2.png'
+export { default as Crumbs1 } from './Crumbs1.png'
+export { default as Crumbs2 } from './Crumbs2.png'

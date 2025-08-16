@@ -7,27 +7,60 @@
   text-align: center;
 }
 
+.iconStack {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.iconStack img {
+  position: absolute;
+  inset: 0;
+}
+
+.iconA {
+  width: 100px;
+  height: 100px;
+  animation: fadeA 1.5s steps(1, end) infinite;
+}
+
+.iconB {
+  width: 100px;
+  height: 100px;
+  animation: fadeB 1.5s steps(1, end) infinite;
+}
+
+@keyframes fadeA {
+  0%, 49.999% { opacity: 1; }
+  50%, 100%   { opacity: 0; }
+}
+
+@keyframes fadeB {
+  0%, 49.999% { opacity: 0; }
+  50%, 100%   { opacity: 1; }
+}
+
 .textContainer h1 {
-  font-size: 50px;
+  font-size: 35px;
   margin: 0;
 }
 
 .textContainer p {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 10px;
 }
 
 .gaegu {
   font-family: "Gaegu", sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   font-style: normal;
 }
 
 @media (max-width: 600px) {
   .textContainer h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .textContainer p {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
