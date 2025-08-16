@@ -5,3 +5,6 @@ export { default as bb } from './BBorder.png'
 
 export { default as HomeIcon1 } from './HomeIcon1.png'
 export { default as HomeIcon2 } from './HomeIcon2.png'
+
+export { default as Profile } from './Profile.jpg'
+export { default as Frame } from './Frame.png'

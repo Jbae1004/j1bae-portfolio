@@ -4,6 +4,7 @@
     left: 37px;
     display: flex;
     gap: 20px;
+    z-index: 1;
     a {
         color: #615850;
         transition: transform 0.2s ease, color 0.2s ease;

@@ -1,7 +1,7 @@
 import styles from "./App.module.scss";
 import { Home, NavBar, MainBorder, SocialHeaders, ScrollHint, BreadCrumbs } from "./components";
 import { About, Contact } from "./pages";
-// import clsx from 'clsx';
+import clsx from 'clsx';
 
 export default function App() {
   return (
@@ -20,13 +20,13 @@ export default function App() {
             <Home />
           </section>
 
-          {/* <section className={styles.snapSection}>
-            <About />
-          </section> */}
-
           {/* <section className={clsx(styles.snapSection, styles.aboutSection)}>
             <About />
           </section> */}
+
+          <section data-section="about" className={styles.snapSection}>
+            <About />
+          </section>
 
           <section data-section="contact" className={styles.snapSection}>
             <Contact />
