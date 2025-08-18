@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./NavBar.module.scss";
+import clsx from "clsx";
 
 const menuNames = ["Home", "About", "Skills", "Contact"];
 
@@ -12,18 +13,14 @@ export const NavBar = () => {
     setHasToggled(true);
   };
 
-  const menuClass = `${styles.menu} ${isOpen
-    ? hasToggled
-      ? styles.showMenu
-      : ""
-    : hasToggled
-      ? styles.hideMenu
-      : ""
-    }`;
-
   return (
-    <div style={{ display: "flex", justifyContent: "end" }}>
-      <ul className={menuClass}>
+    <div className={styles.navWrapper}>
+      <ul
+        className={clsx(
+          styles.menu,
+          hasToggled && (isOpen ? styles.showMenu : styles.hideMenu)
+        )}
+      >
         {menuNames.map((name) => (
           <li key={name} className={styles.menuItem}>
             {name}
@@ -31,17 +28,16 @@ export const NavBar = () => {
         ))}
       </ul>
 
-      <div style={{ display: "flex", justifyContent: "end" }}>
-        <div
-          className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
-          onClick={toggleMenu}
-        >
-          {[1, 2, 3].map((_bar) => (
-            <span key={_bar} className={styles.bar} />
-          ))}
-        </div>
+      <div
+        className={clsx(styles.hamburger, { [styles.open]: isOpen })}
+        onClick={toggleMenu}
+      >
+        {[1, 2, 3].map((_bar) => (
+          <span key={_bar} className={styles.bar} />
+        ))}
       </div>
     </div>
   );
 };
+
 export default NavBar;

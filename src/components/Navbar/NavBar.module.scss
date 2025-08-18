@@ -1,3 +1,8 @@
+.navWrapper {
+  display: flex;
+  justify-self: flex-end;
+}
+
 .hamburger {
   position: absolute;
   top: 40px;
@@ -8,30 +13,32 @@
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-}
 
-.bar {
-  height: 3px;
-  background-color: #615850;
-  border-radius: 0;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
+  .bar {
+    height: 3px;
+    background-color: #615850;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
 
-.open .bar {
-  background-color: white;
-}
+  &.open {
+    .bar {
+      background-color: white;
 
-.open .bar:nth-child(1) {
-  transform: rotate(45deg) translate(2px, 1px);
-}
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(2px, 1px);
+      }
 
-.open .bar:nth-child(2) {
-  opacity: 0;
-}
+      &:nth-child(2) {
+        opacity: 0;
+      }
 
-.open .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(10px, -10px);
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -10px);
+      }
+    }
+  }
 }
 
 .menu {
@@ -119,25 +126,24 @@
   margin: 0 auto;
   padding-left: 35px;
   transition: letter-spacing 0.1s ease;
-}
 
-.menuItem:hover {
-  letter-spacing: 1px;
-}
+  &:hover {
+    letter-spacing: 1px;
+    &::before {
+      width: 60%;
+      border-radius: 30%;
+    }
+  }
 
-.menuItem::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 33px;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #9ca4bf, #c8cddb);
-  border-radius: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.menuItem:hover::before {
-  width: 60%;
-  border-radius: 30%;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 33px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #9ca4bf, #c8cddb);
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+  }
 }
