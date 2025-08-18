@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./BreadCrumbs.module.scss";
 import { Crumbs1, Crumbs2 } from "../../assets/icons";
+import clsx from "clsx";
 
 export const BreadCrumbs = () => {
     const pages = ["home", "about", "contact"];
@@ -44,7 +45,7 @@ export const BreadCrumbs = () => {
                         <img
                             src={active ? Crumbs2 : Crumbs1}
                             alt=""
-                            className={`${styles.icon} ${active ? styles.active : ""}`}
+                            className={clsx(styles.icon, { [styles.active]: active })}
                             draggable={false}
                         />
                     </button>

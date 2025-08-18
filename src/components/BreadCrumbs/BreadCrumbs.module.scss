@@ -16,11 +16,12 @@
   width: 27px;
   height: 27px;
   transition: transform 120ms ease, opacity 120ms ease;
-}
 
-.icon:hover {
+&:hover {
   transform: scale(1.06);
 }
+
 .active {
   transform: scale(1.1);
+}
 }
