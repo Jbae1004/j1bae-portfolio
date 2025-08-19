@@ -1,5 +1,5 @@
-$borderY: 80px;
-$borderX: 80px;
+$borderY: 85px;
+$borderX: 85px;
 
 .topBorder,
 .bottomBorder,
@@ -15,7 +15,7 @@ $borderX: 80px;
   right: 0;
   height: $borderY;
   background: url("../../assets/images/TBorder.png") repeat-x top center;
-  background-size: auto 170px;
+  background-size: auto 175px;
 }
 .bottomBorder {
   bottom: 0;
@@ -23,7 +23,7 @@ $borderX: 80px;
   right: 0;
   height: $borderY;
   background: url("../../assets/images/BBorder.png") repeat-x bottom center;
-  background-size: auto 170px;
+  background-size: auto 175px;
 }
 
 .leftBorder {
@@ -32,7 +32,7 @@ $borderX: 80px;
   left: 0;
   width: $borderX;
   background: url("../../assets/images/LBorder.png") repeat-y center left;
-  background-size: 170px auto;
+  background-size: 175px auto;
 }
 .rightBorder {
   top: 0;
@@ -40,5 +40,5 @@ $borderX: 80px;
   right: 0;
   width: $borderX;
   background: url("../../assets/images/RBorder.png") repeat-y center right;
-  background-size: 170px auto;
+  background-size: 175px auto;
 }

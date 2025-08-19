@@ -9,14 +9,14 @@
 
 .iconStack {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
 
   img {
     position: absolute;
     inset: 0;
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
   }
 
   .duck1 {
@@ -74,11 +74,35 @@
   font-style: normal;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-height: 600px) {
+  .iconStack {
+    width: 100px;
+    height: 100px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
   .textContainer h1 {
-    font-size: 20px;
+    font-size: 25px;
   }
   .textContainer p {
-    font-size: 15px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px), (max-height: 400px) {
+  .iconStack {
+    display: none;
+  }
+
+  .textContainer h1 {
+    font-size: 22px;
+  }
+
+  .textContainer p {
+    font-size: 18px;
   }
 }
