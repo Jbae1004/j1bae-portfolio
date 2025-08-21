@@ -1,113 +1,96 @@
 .about {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-}
-
-.textContainer {
-  position: relative;
-  width: 550px;
-  height: 500px;
-}
-
-// .textContainer .frame {
-//   position: absolute;
-//   width: 570px;
-//   height: 530px;
-//   object-fit: fill;
-//   pointer-events: none;
-//   z-index: 1;
-// }
-
-// .frame {
-//   animation: bloom 6s ease-in-out infinite;
-//   animation: float 8s ease-in-out infinite;
-// }
-
-// @keyframes float {
-//   0%, 100% { transform: translate(-50%, -50%); }
-//   50% { transform: translate(-50%, -52%); }
-// }
-
-// @keyframes bloom {
-//   0%, 100% { transform: translate(-50%, -50%) scale(1); }
-//   50% { transform: translate(-50%, -50%) scale(1.03); }
-// }
-
-// .textContainer:hover .frame {
-//   filter: drop-shadow(0 0 8px rgba(255, 200, 200, 0.6));
-//   transition: filter 0.3s ease;
-// }
-
-  .textContent {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  padding: 55px;
-  box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: left;
-
-    p {
-      @extend .Fredoka;
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 12px 12px 12px 12px;
-    }
-  }
-//   .textContent p {
-//   opacity: 0;
-//   transform: translateY(20px);
-//   animation: fadeInUp 1s ease forwards;
-// }
-
-// .textContent p:nth-child(1) { animation-delay: 0.3s; }
-// .textContent p:nth-child(2) { animation-delay: 0.6s; }
-
-// @keyframes fadeInUp {
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
-
-@media (max-width: 600px) {
-  .textContainer {
-    width: 340px;
-    height: 340px;
-
-    .textContent {
-      inset: 28px;
-      p { font-size: 13px; }
-      h1 { font-size: 16px; }
-    }
-  }
+  gap: 80px;
+  padding: 40px;
 }
 
-// .profile {
-//   width: 300px;
-//   height: 300px;
-//   object-fit: cover;
-//   padding: 0 50px;
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 
-//   @media (max-width: 600px) {
-//     width: 150px;
-//     height: 150px;
-//     padding: 0;
-//   }
-// }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
 .Fredoka {
   font-family: "Fredoka", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 350;
+  line-height: 25px;
+  max-width: 450px;
+}
+
+.image {
+  width: 260px;
+  height: auto;
+  border-radius: 16px;
+  // box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.slideLeft {
+  animation: slideLeft 1s ease forwards;
+}
+
+.slideRight {
+  animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.flipCard {
+  background: transparent;
+  width: 260px;
+  height: 260px;
+  perspective: 1000px; // 3D effect
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.flipCard:hover .flipInner {
+  transform: rotateY(180deg); // flips on hover
+}
+
+.flipFront,
+.flipBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  backface-visibility: hidden;
+  border-radius: 16px;
+}
+
+.flipBack {
+  transform: rotateY(180deg);
 }
