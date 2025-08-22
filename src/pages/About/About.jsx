@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-    AboutDuck1,
-    AboutDuck2,
-    AboutDuck3,
-    AboutDuck4,
-} from "../../assets/images";
+import { AboutDuck1, AboutDuck2, AboutDuck3, AboutDuck4 } from "../../assets/images";
 import styles from "./About.module.scss";
 
 export const About = () => {
@@ -15,13 +10,8 @@ export const About = () => {
         if (!el) return;
 
         const io = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                    io.unobserve(entry.target);
-                }
-            },
-            { threshold: 0.2 }
+            ([entry]) => setVisible(entry.isIntersecting),
+            { threshold: 0.3, rootMargin: "0px 0px -10% 0px" }
         );
 
         io.observe(el);
