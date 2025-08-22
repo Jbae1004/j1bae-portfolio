@@ -1,7 +1,7 @@
 .about {
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 60px;
   padding: 50px;
 }
 
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 70px;
+  gap: 60px;
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -23,6 +23,7 @@
   font-weight: 350;
   line-height: 28px;
   max-width: 500px;
+  color:412525;
 }
 
 .fromLeft,
@@ -52,8 +53,8 @@
 
 
 .flipCard {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   perspective: 1000px;
 
   &:hover .flipInner {
