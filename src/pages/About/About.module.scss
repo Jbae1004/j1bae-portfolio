@@ -1,17 +1,17 @@
 .about {
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  padding: 40px;
+  gap: 70px;
+  padding: 50px;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 70px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     flex-direction: column;
     text-align: center;
   }
@@ -22,51 +22,40 @@
   font-size: 20px;
   font-weight: 350;
   line-height: 25px;
-  max-width: 450px;
+  max-width: 500px;
 }
 
-.image {
-  width: 260px;
-  height: auto;
-  border-radius: 16px;
-  // box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+.fromLeft,
+.fromRight {
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+  will-change: transform, opacity;
 }
 
-.slideLeft {
-  animation: slideLeft 1s ease forwards;
+.fromLeft {
+  transform: translateX(-40px);
+}
+.fromRight {
+  transform: translateX(40px);
 }
 
-.slideRight {
-  animation: slideRight 1s ease forwards;
+.in .fromLeft,
+.in .fromRight,
+.inDelayed .fromLeft,
+.inDelayed .fromRight {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-@keyframes slideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.inDelayed .fromLeft,
+.inDelayed .fromRight {
+  transition-delay: 450ms;
 }
 
 .flipCard {
-  background: transparent;
-  width: 260px;
-  height: 260px;
-  perspective: 1000px; // 3D effect
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
 }
 
 .flipInner {
@@ -78,7 +67,7 @@
 }
 
 .flipCard:hover .flipInner {
-  transform: rotateY(180deg); // flips on hover
+  transform: rotateY(180deg);
 }
 
 .flipFront,
@@ -88,7 +77,6 @@
   height: 100%;
   object-fit: contain;
   backface-visibility: hidden;
-  border-radius: 16px;
 }
 
 .flipBack {
