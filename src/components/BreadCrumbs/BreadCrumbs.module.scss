@@ -4,7 +4,7 @@
   bottom: 25px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   z-index: 13;
 }
 
@@ -14,8 +14,8 @@
 }
 
 .icon {
-  width: 27px;
-  height: 27px;
+  width: 35px;
+  height: 35px;
   transition: transform 120ms ease, opacity 120ms ease;
 
   &:hover {

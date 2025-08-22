@@ -28,6 +28,7 @@
 .fromLeft,
 .fromRight {
   opacity: 0;
+  transform: translateX(40px);
   transition: transform 1s ease, opacity 1s ease;
   will-change: transform, opacity;
 }
@@ -35,39 +36,37 @@
 .fromLeft {
   transform: translateX(-40px);
 }
-.fromRight {
-  transform: translateX(40px);
-}
 
 .in .fromLeft,
-.in .fromRight,
-.inDelayed .fromLeft,
-.inDelayed .fromRight {
+.in .fromRight {
   opacity: 1;
   transform: translateX(0);
 }
 
 .inDelayed .fromLeft,
 .inDelayed .fromRight {
+  opacity: 1;
+  transform: translateX(0);
   transition-delay: 450ms;
 }
+
 
 .flipCard {
   width: 300px;
   height: 300px;
   perspective: 1000px;
+
+  &:hover .flipInner {
+    transform: rotateY(180deg);
+  }
 }
 
 .flipInner {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
   transition: transform 0.8s;
-}
-
-.flipCard:hover .flipInner {
-  transform: rotateY(180deg);
+  transform-style: preserve-3d;
 }
 
 .flipFront,
