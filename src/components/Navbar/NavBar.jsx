@@ -13,6 +13,14 @@ export const NavBar = () => {
     setHasToggled(true);
   };
 
+  const scrollToSection = (name) => {
+    const target = document.getElementById(name.toLowerCase());
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
   return (
     <div className={styles.navWrapper}>
       <ul
@@ -22,7 +30,11 @@ export const NavBar = () => {
         )}
       >
         {menuNames.map((name) => (
-          <li key={name} className={styles.menuItem}>
+          <li
+            key={name}
+            className={styles.menuItem}
+            onClick={() => scrollToSection(name)}
+          >
             {name}
           </li>
         ))}
