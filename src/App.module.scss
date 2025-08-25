@@ -28,13 +28,14 @@ $border-thickness: 80px;
   width: 100%;
 }
 
+
 .container {
   position: absolute;
   top: $border-thickness;
   left: $border-thickness;
   right: $border-thickness;
   bottom: $border-thickness;
-  background-color: #faf8f3;
+  background-color: #f6f6f1;
   border-radius: 20px;
   overflow: hidden;
   

@@ -10,3 +10,5 @@ export { default as AboutDuck1 } from './AboutDuck1.png'
 export { default as AboutDuck2 } from './AboutDuck2.png'
 export { default as AboutDuck3 } from './AboutDuck3.png'
 export { default as AboutDuck4 } from './AboutDuck4.png'
+
+export { default as logo } from './logo.png'

@@ -21,7 +21,7 @@ export const About = () => {
 
     return (
         <div id="about" className={styles.about}>
-            <div className={clsx(styles.row, { [styles.in]: visible })}>
+            <div className={clsx(styles.row, { [styles.fadeIn]: visible })}>
                 <p className={clsx(styles.fredoka, styles.fromLeft)}>
                     I&apos;m Jiwon Bae, a recent computer science graduate and front-end
                     junior who loves to build, design, and learn. I&apos;m always looking
