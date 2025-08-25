@@ -17,13 +17,13 @@
   }
 }
 
-.Fredoka {
+.fredoka {
   font-family: "Fredoka", sans-serif;
   font-size: 20px;
   font-weight: 350;
   line-height: 28px;
   max-width: 500px;
-  color:412525;
+  color: 412525;
 }
 
 .fromLeft,
@@ -51,7 +51,6 @@
   transition-delay: 450ms;
 }
 
-
 .flipCard {
   width: 280px;
   height: 280px;
@@ -68,17 +67,17 @@
   height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-}
 
-.flipFront,
-.flipBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  backface-visibility: hidden;
-}
+  .flipFront,
+  .flipBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    backface-visibility: hidden;
+  }
 
-.flipBack {
-  transform: rotateY(180deg);
+  .flipBack {
+    transform: rotateY(180deg);
+  }
 }

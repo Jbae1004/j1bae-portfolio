@@ -3,32 +3,26 @@ import { Home, NavBar, MainBorder, SocialHeaders, ScrollHint, BreadCrumbs } from
 import { About, Contact } from "./pages";
 import clsx from 'clsx';
 
+const BREAD_CRUMBS_SECTIONS = ["home", "about", "contact"]
+
 export default function App() {
   return (
     <div className={styles.body}>
       <MainBorder />
-
       <div className={styles.container}>
+        <BreadCrumbs sections={BREAD_CRUMBS_SECTIONS} scrollContainerId="hint" />
         <SocialHeaders />
         <ScrollHint />
         <NavBar />
 
-        <BreadCrumbs sections={["home", "about", "contact"]} scrollContainerId="hint" />
-
         <div id='hint' className={styles.scrollSnapContainer}>
-          <section data-section="home" className={styles.snapSection}>
+          <section data-section="home" className={clsx(styles.snapSection, styles.homeSection)}>
             <Home />
           </section>
-
-          {/* <section className={clsx(styles.snapSection, styles.aboutSection)}>
-            <About />
-          </section> */}
-
-          <section data-section="about" className={styles.snapSection}>
+          <section data-section="about" className={clsx(styles.snapSection, styles.aboutSection)}>
             <About />
           </section>
-
-          <section data-section="contact" className={styles.snapSection}>
+          <section data-section="contact" className={clsx(styles.snapSection, styles.contactSection)}>
             <Contact />
           </section>
         </div>
