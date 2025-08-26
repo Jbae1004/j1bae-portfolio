@@ -19,32 +19,19 @@
     width: 100%;
     height: auto;
   }
-
-//   h2 {
-//     position: absolute;
-//     top: 10%;
-//     left: 10%;
-//     font-size: 2.5rem;
-//     line-height: 1.2;
-//   }
-
-//   .get {
-//     color: #6b8f6b;
-//     font-weight: 600;
-//   }
-
-//   .touch {
-//     color: #3f2f2b;
-//     font-weight: 700;
-//   }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   max-width: 400px;
   width: 100%;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
 
   input,
   textarea {
@@ -52,6 +39,15 @@
     border: 2px solid #aab1cb;
     border-radius: 4px;
     font-size: 1rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:focus {
+      border-color: #2d6cdf; // blue focus
+    }
+
+    &:required:invalid {
+      border-color: #e53e3e; // red error
+    }
   }
 
   textarea {
@@ -73,4 +69,41 @@
       background: #b0b7d0;
     }
   }
+
+  // inline error text
+  .error {
+    display: none;
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: #e53e3e;
+  }
+
+  // show required message when empty
+  input:required:invalid:placeholder-shown ~ .required {
+    display: block;
+  }
+
+  // show invalid email message when not empty but wrong
+  input[type="email"]:required:invalid:not(:placeholder-shown) ~ .invalid {
+    display: block;
+  }
+
+  // form-level error message
+  .formError {
+    display: none;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #e53e3e;
+  }
+
+  &:has(:invalid) .formError {
+    display: block;
+  }
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3f2f2b; // neutral
 }
