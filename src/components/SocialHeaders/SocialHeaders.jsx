@@ -1,5 +1,5 @@
 import styles from "./SocialHeaders.module.scss";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiUser } from "react-icons/fi";
 
 export const SocialHeader = () => {
     return (
@@ -18,8 +18,8 @@ export const SocialHeader = () => {
             >
                 <FiLinkedin />
             </a>
-            <a href="mailto:g1bae96@gmail.com">
-                <FiMail />
+            <a href="/resume.pdf" r download="Jiwon_Bae_Resume.pdf">
+                <FiUser />
             </a>
         </div>
     );
