@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Contact.module.scss";
-import { logo } from "../../assets/images";
+import { MailDuck } from "../../assets/images";
 import clsx from "clsx";
 
 export const Contact = () => {
@@ -56,7 +56,7 @@ export const Contact = () => {
   return (
     <section className={styles.contact}>
       <div className={styles.left}>
-        <img src={logo} alt="ContactLogo" />
+        <img src={MailDuck} alt="ContactLogo" />
       </div>
 
       <form

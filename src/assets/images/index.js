@@ -11,4 +11,4 @@ export { default as AboutDuck2 } from './AboutDuck2.png'
 export { default as AboutDuck3 } from './AboutDuck3.png'
 export { default as AboutDuck4 } from './AboutDuck4.png'
 
-export { default as logo } from './logo.png'
+export { default as MailDuck } from './MailDuck.gif'

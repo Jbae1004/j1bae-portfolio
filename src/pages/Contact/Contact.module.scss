@@ -6,7 +6,7 @@ $secondary-color: #a5abca;
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding: 40px;
+  padding: 50px;
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -19,7 +19,7 @@ $secondary-color: #a5abca;
 
   img {
     width: 100%;
-    height: auto;
+    // height: auto;
     display: block;
   }
 }
@@ -28,8 +28,8 @@ $secondary-color: #a5abca;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400px;
-  width: 100%;
+  max-width: 600px;
+  width: 500px;
 
   .field {
     display: flex;
@@ -39,7 +39,6 @@ $secondary-color: #a5abca;
   input,
   textarea {
     @extend .gfs-neohellenic-regular;
-    width: 500px;
     padding: 8px;
     border: 1.9px solid $secondary-color;
     border-radius: 10px;
@@ -57,7 +56,7 @@ $secondary-color: #a5abca;
 
   button {
     @extend .gfs-neohellenic-regular;
-    background: $secondary-color;
+    background: #b2bbe0;
     color: white;
     border: none;
     padding: 8px;
@@ -67,7 +66,7 @@ $secondary-color: #a5abca;
     transition: background 0.2s ease;
 
     &:hover {
-      background: #c0c5db;
+      background: #cfd4e9;
     }
   }
 
