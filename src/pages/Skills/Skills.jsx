@@ -1,5 +1,4 @@
 import styles from './Skills.module.scss';
-import clsx from 'clsx';
 
 export const Skills = () => {
 

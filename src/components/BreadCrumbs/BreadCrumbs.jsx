@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import styles from "./BreadCrumbs.module.scss";
 import { Crumbs1, Crumbs2 } from "../../assets/icons";
 import clsx from "clsx";
 
 export const BreadCrumbs = () => {
-    const pages = ["home", "about", "skills", "contact"];
+    const pages = useMemo(() => ["home", "about", "skills", "contact"], []);
     const [currentPage, setCurrentPage] = useState("home");
 
     const scrollToPage = (page) => {
@@ -28,7 +28,7 @@ export const BreadCrumbs = () => {
         });
 
         return () => observer.disconnect();
-    }, []);
+    }, [pages]);
 
     return (
         <div className={styles.crumbs} aria-label="Page breadcrumbs">
