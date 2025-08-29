@@ -21,7 +21,7 @@ export const SocialHeader = () => {
                 <FiLinkedin />
             </a>
             <a
-                href="/resume.pdf"
+                href="/Resume.pdf"
                 download="Jiwon_Bae_Resume.pdf"
                 data-label="Resume"
             >
