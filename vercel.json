@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/((?!resume\\.pdf).*)", "destination": "/index.html" }
+    { "source": "/((?!Resume\\.pdf).*)", "destination": "/index.html" }
   ],
   "builds": [
     { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } }
