@@ -8,6 +8,7 @@ export const SocialHeader = () => {
                 href="https://github.com/Jbae1004"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-label="GitHub"
             >
                 <FiGithub />
             </a>
@@ -15,10 +16,15 @@ export const SocialHeader = () => {
                 href="https://www.linkedin.com/in/jiwonbae1004/"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-label="LinkedIn"
             >
                 <FiLinkedin />
             </a>
-            <a href="/resume.pdf" r download="Jiwon_Bae_Resume.pdf">
+            <a
+                href="/resume.pdf"
+                download="Jiwon_Bae_Resume.pdf"
+                data-label="Resume"
+            >
                 <FiUser />
             </a>
         </div>

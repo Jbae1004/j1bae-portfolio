@@ -54,7 +54,7 @@ export const Contact = () => {
 
 
   return (
-    <section className={styles.contact}>
+    <div id="contact" className={styles.contact}>
       <div className={styles.left}>
         <img src={MailDuck} alt="ContactLogo" />
       </div>
@@ -107,7 +107,7 @@ export const Contact = () => {
 
         {result && <span className={styles.result}>{result}</span>}
       </form>
-    </section>
+    </div>
   );
 };
 export default Contact;

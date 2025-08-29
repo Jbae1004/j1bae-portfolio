@@ -5,6 +5,7 @@
   display: flex;
   gap: 20px;
   z-index: 1;
+
   a {
     color: #615850;
     transition: transform 0.2s ease, color 0.2s ease;
@@ -16,6 +17,29 @@
     svg {
       font-size: 25px;
       stroke-width: 1.8px;
+    }
+
+    &::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #8189aa;
+      font-family: "Gaegu", sans-serif;
+      font-size: 15px;
+      font-weight: 100;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 1px 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(3px);
     }
   }
 }
