@@ -41,6 +41,7 @@ export const BreadCrumbs = () => {
                         className={styles.item}
                         onClick={() => scrollToPage(page)}
                         aria-label={`Go to ${page}`}
+                        data-label={page}
                     >
                         <img
                             src={active ? Crumbs2 : Crumbs1}
