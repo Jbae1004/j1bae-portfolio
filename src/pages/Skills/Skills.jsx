@@ -10,13 +10,13 @@ export const Skills = () => {
         { name: "React.js", icon: "logos:react" }
     ];
 
-    // const renderSkills = (skills) =>
-    //     skills.map((skill) => (
-    //         <div key={skill.name} className={styles.skill}>
-    //             <Icon icon={skill.icon} className={styles.icon} />
-    //             <span>{skill.name}</span>
-    //         </div>
-    // ));
+    const renderSkills = (skills) =>
+        skills.map((skill) => (
+            <div key={skill.name} className={styles.skill}>
+                <Icon icon={skill.icon} className={styles.icon} />
+                <span>{skill.name}</span>
+            </div>
+        ));
 
     return (
         <section className={styles.skills}>
@@ -24,12 +24,12 @@ export const Skills = () => {
 
             <div className={styles.group}>
                 <h3>Programming Languages</h3>
-                {/* <div className={styles.list}>{renderSkills(languages)}</div> */}
+                <div className={styles.list}>{renderSkills(languages)}</div>
             </div>
 
             <div className={styles.group}>
                 <h3>Technologies</h3>
-                {/* <div className={styles.list}>{renderSkills(technologies)}</div> */}
+                <div className={styles.list}>{renderSkills(technologies)}</div>
             </div>
         </section>
     );
