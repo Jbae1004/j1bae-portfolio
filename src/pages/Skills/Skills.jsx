@@ -3,11 +3,21 @@ import styles from "./Skills.module.scss";
 
 export const Skills = () => {
     const languages = [
-        { name: "JavaScript", icon: "logos:javascript" }
+        { name: "JavaScript", icon: "logos:javascript" },
+        { name: "TypeScript", icon: "logos:typescript-icon" },
+        { name: "Python", icon: "logos:python" },
+        { name: "Java", icon: "logos:java" },
+        { name: "C", icon: "mdi:language-c" },
+        { name: "C++", icon: "mdi:language-cpp" },
     ];
 
     const technologies = [
-        { name: "React.js", icon: "logos:react" }
+        { name: "React.js", icon: "logos:react" },
+        { name: "HTML", icon: "vscode-icons:file-type-html" },
+        { name: "CSS", icon: "vscode-icons:file-type-css" },
+        { name: "SCSS", icon: "vscode-icons:file-type-scss2" },
+        { name: "Linux", icon: "logos:linux-tux" },
+        { name: "Jupyter", icon: "logos:jupyter" },
     ];
 
     const renderSkills = (skills) =>
