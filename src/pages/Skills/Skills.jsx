@@ -1,5 +1,7 @@
 import { Icon } from "@iconify/react";
 import styles from "./Skills.module.scss";
+import { lilypad } from "../../assets/images";
+import clsx from "clsx";
 
 export const Skills = () => {
     const languages = [
@@ -22,23 +24,26 @@ export const Skills = () => {
 
     const renderSkills = (skills) =>
         skills.map((skill) => (
-            <div key={skill.name} className={styles.skill}>
-                <Icon icon={skill.icon} className={styles.icon} />
-                <span>{skill.name}</span>
+            <div key={skill.name} className={clsx(styles.skill)}>
+                <div className={clsx(styles.iconWrapper)}>
+                    <img src={lilypad} alt="" className={clsx(styles.lilypad)} />
+                    <Icon icon={skill.icon} className={clsx(styles.icon)} />
+                </div>
+                <span className={clsx(styles.gaegu)}>{skill.name}</span>
             </div>
         ));
 
     return (
         <section className={styles.skills}>
-            <h2 className={styles.title}>Skills</h2>
+            <h1 className={clsx(styles.title, styles.gaegu)}>Skills</h1>
 
             <div className={styles.group}>
-                <h3>Programming Languages</h3>
+                <h2 className={clsx(styles.gaegu)}>Programming Languages</h2>
                 <div className={styles.list}>{renderSkills(languages)}</div>
             </div>
 
             <div className={styles.group}>
-                <h3>Technologies</h3>
+                <h2 className={clsx(styles.gaegu)}>Technologies</h2>
                 <div className={styles.list}>{renderSkills(technologies)}</div>
             </div>
         </section>

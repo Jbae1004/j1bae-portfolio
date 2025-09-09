@@ -1,41 +1,67 @@
 .skills {
-  padding: 50px 20px;
-  text-align: center;
+    padding: 50px 20px;
+    text-align: center;
 
-  .title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
+    .title {
+        @extend .gaegu;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
 }
 
 .group {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
+    h2 {
+        @extend .gaegu;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
 
-  .icon {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
+    span {
+        @extend .gaegu;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+}
 
-  span {
-    font-size: 0.9rem;
-  }
+.iconWrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lilypad {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+.icon {
+    font-size: 40px;
+    z-index: 1;
+}
+
+.gaegu {
+    font-family: "Gaegu", sans-serif;
+    font-style: normal;
 }
