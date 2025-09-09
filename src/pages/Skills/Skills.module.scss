@@ -1,21 +1,20 @@
 .skills {
-    padding: 50px 20px;
+    padding: 20px;
     text-align: center;
 
     .title {
         @extend .gaegu;
-        font-size: 32px;
-        margin-bottom: 30px;
+        font-size: 20px;
     }
 }
 
 .group {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     h2 {
         @extend .gaegu;
-        font-size: 24px;
-        margin-bottom: 20px;
+        font-size: 18px;
+        margin-bottom: 0px;
     }
 }
 
@@ -23,19 +22,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100px;
+    width: 110px;
 
     span {
         @extend .gaegu;
         font-size: 14px;
-        margin-top: 8px;
+        margin-top: 5px;
     }
 }
 
@@ -45,7 +44,7 @@
     height: 80px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .lilypad {
@@ -57,8 +56,10 @@
 }
 
 .icon {
+    position: relative;
     font-size: 40px;
     z-index: 1;
+    margin-bottom: 65px;
 }
 
 .gaegu {
