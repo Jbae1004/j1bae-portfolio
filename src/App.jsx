@@ -1,33 +1,44 @@
 import styles from "./App.module.scss";
-import { Home, NavBar, MainBorder, SocialHeaders, ScrollHint, BreadCrumbs } from "./components";
+import {
+  Home,
+  NavBar,
+  MainBorder,
+  SocialHeaders,
+  ScrollHint,
+  BreadCrumbs,
+} from "./components";
 import { About, Skills, Contact } from "./pages";
-import clsx from 'clsx';
 
-const BREAD_CRUMBS_SECTIONS = ["home", "about", "skills", "contact"]
+const SECTIONS = [
+  { label: "home", component: <Home /> },
+  { label: "about", component: <About /> },
+  { label: "skills", component: <Skills /> },
+  { label: "contact", component: <Contact /> },
+];
+
+const BREAD_CRUMBS_LABELS = SECTIONS.map((s) => s.label);
 
 export default function App() {
   return (
     <div className={styles.body}>
       <MainBorder />
+
       <div className={styles.container}>
-        <BreadCrumbs sections={BREAD_CRUMBS_SECTIONS} scrollContainerId="hint" />
+        <BreadCrumbs sections={BREAD_CRUMBS_LABELS} scrollContainerId="hint" />
         <SocialHeaders />
         <ScrollHint />
         <NavBar />
 
-        <div id='hint' className={styles.scrollSnapContainer}>
-          <section data-section="home" className={clsx(styles.snapSection, styles.homeSection)}>
-            <Home />
-          </section>
-          <section data-section="about" className={clsx(styles.snapSection, styles.aboutSection)}>
-            <About />
-          </section>
-          <section data-section="skills" className={clsx(styles.snapSection, styles.skillsSection)}>
-            <Skills />
-          </section>
-          <section data-section="contact" className={clsx(styles.snapSection, styles.contactSection)}>
-            <Contact />
-          </section>
+        <div id="hint" className={styles.scrollSnapContainer}>
+          {SECTIONS.map((section) => (
+            <section
+              key={section.label}
+              data-section={section.label}
+              className={styles.snapSection}
+            >
+              {section.component}
+            </section>
+          ))}
         </div>
       </div>
     </div>

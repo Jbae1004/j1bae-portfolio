@@ -1,6 +1,5 @@
 import { Icon } from "@iconify/react";
 import styles from "./Skills.module.scss";
-import { lilypad1, lilypad2 } from "../../assets/images";
 import clsx from "clsx";
 
 export const Skills = () => {
@@ -26,8 +25,6 @@ export const Skills = () => {
         skills.map((skill) => (
             <div key={skill.name} className={clsx(styles.skill)}>
                 <div className={clsx(styles.iconWrapper)}>
-                    <img src={lilypad1} alt="" className={clsx(styles.lilypad1)} />
-                    <img src={lilypad2} alt="" className={clsx(styles.lilypad2)} />
                     <Icon icon={skill.icon} className={clsx(styles.icon)} />
                 </div>
                 <span className={clsx(styles.gaegu)}>{skill.name}</span>
