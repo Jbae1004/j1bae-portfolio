@@ -47,7 +47,15 @@
     align-items: flex-end;
 }
 
-.lilypad {
+.lilypad1 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+.lilypad2 {
     position: absolute;
     bottom: 0;
     width: 100%;

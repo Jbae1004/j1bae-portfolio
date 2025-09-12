@@ -13,4 +13,5 @@ export { default as AboutDuck4 } from './AboutDuck4.png'
 
 export { default as MailDuck } from './MailDuck.gif'
 
-export { default as lilypad } from './Lilypad.png'
+export { default as lilypad1 } from './Lilypad1.gif'
+export { default as lilypad2 } from './Lilypad2.gif'
